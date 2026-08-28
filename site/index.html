@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="每日 GitHub AI 热门项目雷达：搜索、筛选、收藏、对比与学习路线。">
+  <title>AI Note · GitHub AI 热榜</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#projects">跳到项目列表</a>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="AI Note 首页">
+        <span class="brand-mark" aria-hidden="true">AI</span>
+        <span><strong>AI Note</strong><small>GitHub intelligence radar</small></span>
+      </a>
+      <nav class="top-actions" aria-label="页面操作">
+        <button class="icon-button" id="favoritesToggle" type="button" aria-pressed="false">☆ 只看收藏</button>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="切换明暗主题">◐</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="command-panel" aria-labelledby="pageTitle">
+        <div class="headline-row">
+          <div>
+            <p class="eyebrow">DAILY SIGNAL / <span id="snapshotDate">加载中</span></p>
+            <h1 id="pageTitle">今天值得关注的 AI 项目</h1>
+            <p class="subtitle" id="dailyThesis">正在读取今日快照…</p>
+          </div>
+          <div class="pulse" aria-label="数据状态"><span></span> DAILY SNAPSHOT</div>
+        </div>
+
+        <div class="controls">
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <span class="sr-only">搜索项目</span>
+            <input id="searchInput" type="search" placeholder="搜索项目、用途或语言…" autocomplete="off">
+            <kbd>/</kbd>
+          </label>
+          <label class="select-wrap">
+            <span class="sr-only">排序</span>
+            <select id="sortSelect">
+              <option value="today">今日增星</option>
+              <option value="stars">总 Star</option>
+              <option value="effort">上手成本</option>
+              <option value="name">项目名称</option>
+            </select>
+          </label>
+        </div>
+        <div class="filter-row" id="categoryFilters" aria-label="项目分类"></div>
+      </section>
+
+      <section class="metrics" aria-label="今日概览">
+        <article><span>收录项目</span><strong id="metricCount">—</strong><small>curated repositories</small></article>
+        <article><span>今日增星</span><strong id="metricGrowth">—</strong><small>snapshot velocity</small></article>
+        <article><span>主要信号</span><strong id="metricCategory">—</strong><small>dominant category</small></article>
+        <article><span>建议投入</span><strong>45 min</strong><small>today's learning block</small></article>
+      </section>
+
+      <div class="workspace">
+        <section class="project-area" aria-labelledby="projectHeading">
+          <div class="section-heading">
+            <div><p class="eyebrow">RADAR</p><h2 id="projectHeading">项目雷达</h2></div>
+            <p><span id="resultCount">0</span> 个结果</p>
+          </div>
+          <div class="project-grid" id="projects" aria-live="polite"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <strong>没有匹配的项目</strong>
+            <p>尝试清除关键词或切换分类。</p>
+          </div>
+        </section>
+
+        <aside class="learning-panel" aria-labelledby="learningHeading">
+          <div class="aside-sticky">
+            <p class="eyebrow">LEARNING QUEUE</p>
+            <h2 id="learningHeading">今日学习路线</h2>
+            <ol id="learningPath"></ol>
+            <div class="practice-card">
+              <span>动手任务</span>
+              <strong id="practiceTitle">加载中…</strong>
+              <p id="practiceDescription"></p>
+            </div>
+            <a class="source-link" id="sourceLink" href="https://github.com/trending" target="_blank" rel="noreferrer">查看 GitHub 原始榜单 ↗</a>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <div class="compare-bar" id="compareBar" hidden>
+    <div><span>已选对比</span><strong id="compareNames"></strong></div>
+    <div class="compare-actions"><button id="clearCompare" type="button">清空</button><button class="primary" id="openCompare" type="button">开始对比</button></div>
+  </div>
+
+  <dialog id="compareDialog">
+    <form method="dialog" class="dialog-shell">
+      <div class="dialog-heading"><div><p class="eyebrow">SIDE BY SIDE</p><h2>项目对比</h2></div><button class="dialog-close" value="close" aria-label="关闭">×</button></div>
+      <div class="compare-table-wrap" id="compareContent"></div>
+    </form>
+  </dialog>
+
+  <template id="projectTemplate">
+    <article class="project-card">
+      <div class="card-topline"><span class="rank"></span><span class="trend-badge"></span><button class="star-button" type="button" aria-label="收藏项目">☆</button></div>
+      <div class="repo-heading"><div class="repo-avatar" aria-hidden="true"></div><div><h3></h3><p class="category"></p></div></div>
+      <p class="description"></p>
+      <div class="signal-row"><div><span>今日</span><strong class="today-stars"></strong></div><div><span>总 Star</span><strong class="total-stars"></strong></div><div><span>语言</span><strong class="language"></strong></div></div>
+      <div class="tags"></div>
+      <div class="card-note"><span>判断</span><p></p></div>
+      <div class="card-footer"><label><input class="compare-checkbox" type="checkbox"> 加入对比</label><a target="_blank" rel="noreferrer">打开 GitHub ↗</a></div>
+    </article>
+  </template>
+
+  <script src="./assets/app.js" defer></script>
+</body>
+</html>
+

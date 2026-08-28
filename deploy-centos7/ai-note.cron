@@ -1,0 +1,12 @@
+# /etc/cron.d/ai-note — CentOS 7 cronie format
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+REPO_URL=https://github.com/changeme2012/ai-note.git
+BRANCH=main
+STATIC_DIR=site
+KEEP_RELEASES=5
+
+# Check for a new commit every five minutes. deploy.sh has its own lock.
+*/5 * * * * root /usr/local/sbin/ai-note-deploy >> /var/log/ai-note-deploy.log 2>&1
+
