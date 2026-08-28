@@ -132,6 +132,15 @@ install -m 0755 deploy-centos7/deploy.sh /usr/local/sbin/ai-note-deploy
 
 这里不要写成 `git fetch origin main`。显式传入 `main` 时，旧版 Git 会把结果写入 `FETCH_HEAD`，但可能不更新脚本随后读取的 `refs/remotes/origin/main`。
 
+如果 GitHub 临时不可达，但服务器已有完整的 `origin/main` 缓存，部署脚本会记录 `WARNING` 并发布缓存版本。网络恢复后，下一次 Cron 会自动取得新版本。若持续出现 `Empty reply from server`，检查代理和 HTTPS 出站连接：
+
+```bash
+env | grep -i proxy
+git config --global --get http.proxy
+curl -4 -Iv --connect-timeout 15 https://github.com/
+GIT_CURL_VERBOSE=1 git fetch --prune origin
+```
+
 随后查看最后 30 行日志：
 
 ```bash

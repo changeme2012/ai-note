@@ -48,7 +48,14 @@ fi
 log "Fetching origin/$BRANCH"
 # Do not pass a branch refspec here. On older Git, `fetch origin main`
 # updates FETCH_HEAD but may leave refs/remotes/origin/main unchanged.
-git_repo fetch --quiet --prune origin
+if ! git_repo fetch --quiet --prune origin; then
+  if git_repo rev-parse --verify "origin/$BRANCH" >/dev/null 2>&1; then
+    log "WARNING: GitHub fetch failed; deploying cached origin/$BRANCH."
+  else
+    log "ERROR: GitHub fetch failed and no cached origin/$BRANCH exists."
+    exit 1
+  fi
+fi
 remote_sha="$(git_repo rev-parse "origin/$BRANCH")"
 deployed_sha=""
 [[ -f "$APP_ROOT/DEPLOYED_SHA" ]] && deployed_sha="$(<"$APP_ROOT/DEPLOYED_SHA")"
