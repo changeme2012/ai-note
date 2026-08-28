@@ -123,12 +123,14 @@ CentOS 7 默认 Git 1.8.3 不支持 `git -C`（该全局选项从 Git 1.8.5 开�
 
 ```bash
 cd /opt/ai-note/repo
-git fetch origin main
+git fetch --prune origin
 git checkout main
 git merge --ff-only origin/main
 install -m 0755 deploy-centos7/deploy.sh /usr/local/sbin/ai-note-deploy
 /usr/local/sbin/ai-note-deploy
 ```
+
+这里不要写成 `git fetch origin main`。显式传入 `main` 时，旧版 Git 会把结果写入 `FETCH_HEAD`，但可能不更新脚本随后读取的 `refs/remotes/origin/main`。
 
 随后查看最后 30 行日志：
 

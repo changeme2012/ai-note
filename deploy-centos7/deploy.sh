@@ -46,7 +46,9 @@ if [[ ! -d "$REPO_DIR/.git" ]]; then
 fi
 
 log "Fetching origin/$BRANCH"
-git_repo fetch --quiet --prune origin "$BRANCH"
+# Do not pass a branch refspec here. On older Git, `fetch origin main`
+# updates FETCH_HEAD but may leave refs/remotes/origin/main unchanged.
+git_repo fetch --quiet --prune origin
 remote_sha="$(git_repo rev-parse "origin/$BRANCH")"
 deployed_sha=""
 [[ -f "$APP_ROOT/DEPLOYED_SHA" ]] && deployed_sha="$(<"$APP_ROOT/DEPLOYED_SHA")"
