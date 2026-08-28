@@ -32,9 +32,8 @@ python3 -m http.server 8000 --directory site
 
 ## CentOS 7 部署
 
-参见 [`deploy-centos7/README.md`](deploy-centos7/README.md)。服务器每 5 分钟检查 `main`，将 `site/` 原子切换到 Nginx 网站目录；失败时保留旧版本。
+参见 [`deploy-centos7/README.md`](deploy-centos7/README.md)。Nginx 默认监听 8088；服务器每 5 分钟检查 `main`，将 `site/` 原子切换到网站目录，失败时保留旧版本。
 
 ## 数据约定
 
 `site/data/projects.json` 是网页读取的当前快照。每日任务更新此文件，并在 `data/daily/YYYY-MM-DD.md` 保存可审计日报。
-

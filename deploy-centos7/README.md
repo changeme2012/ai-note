@@ -5,7 +5,7 @@
 - CentOS Linux 7.9.2009
 - x86_64
 - GitHub 公有仓库 `changeme2012/ai-note`
-- Nginx 静态网站
+- Nginx 静态网站，监听 TCP 8088，不占用已有的 80 端口站点
 
 服务器只拉取并发布仓库 `site/` 目录，不安装 Node.js，也不在服务器上编译。
 
@@ -66,6 +66,8 @@ sudo install -m 0644 deploy-centos7/nginx.conf /etc/nginx/conf.d/ai-note.conf
 sudo mkdir -p /opt/ai-note/releases
 sudo semanage fcontext -a -t httpd_sys_content_t '/opt/ai-note(/.*)?' 2>/dev/null \
   || sudo semanage fcontext -m -t httpd_sys_content_t '/opt/ai-note(/.*)?'
+sudo semanage port -a -t http_port_t -p tcp 8088 2>/dev/null \
+  || sudo semanage port -m -t http_port_t -p tcp 8088
 sudo restorecon -RFv /opt/ai-note
 ```
 
@@ -90,7 +92,7 @@ sudo systemctl enable crond
 sudo systemctl restart crond
 ```
 
-如果 `/etc/nginx/nginx.conf` 中已经有另一个 `default_server`，请删除本配置两行中的 `default_server`，然后重新执行 `sudo nginx -t`。
+如果已有其他 Nginx 配置也监听 8088 且使用 `default_server`，请先解决端口冲突，然后重新执行 `sudo nginx -t`。已有的 80 端口站点无需修改。
 
 ## 5. 网络入口
 
@@ -98,13 +100,12 @@ sudo systemctl restart crond
 
 ```bash
 if sudo systemctl is-active --quiet firewalld; then
-  sudo firewall-cmd --permanent --add-service=http
-  sudo firewall-cmd --permanent --add-service=https
+  sudo firewall-cmd --permanent --add-port=8088/tcp
   sudo firewall-cmd --reload
 fi
 ```
 
-还需在阿里云 ECS 安全组中放行 TCP 80；配置 HTTPS 后再放行 TCP 443。
+还需在阿里云 ECS 安全组中放行入方向 TCP 8088。部署完成后访问 `http://服务器公网IP:8088/`。
 
 ## 6. 查看运行状态
 
