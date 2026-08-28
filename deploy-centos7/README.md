@@ -117,6 +117,25 @@ sudo systemctl status nginx crond --no-pager
 
 如果日志显示 `site/index.html does not exist`，说明网站静态文件尚未提交，或目录名不同。目录不同时修改 `/etc/cron.d/ai-note` 中的 `STATIC_DIR`。
 
+### 旧版 Git 报 `Unknown option: -C`
+
+CentOS 7 默认 Git 1.8.3 不支持 `git -C`（该全局选项从 Git 1.8.5 开始提供）。当前脚本已改用兼容写法。如果服务器上安装的是修复前的脚本，执行一次：
+
+```bash
+cd /opt/ai-note/repo
+git fetch origin main
+git checkout main
+git merge --ff-only origin/main
+install -m 0755 deploy-centos7/deploy.sh /usr/local/sbin/ai-note-deploy
+/usr/local/sbin/ai-note-deploy
+```
+
+随后查看最后 30 行日志：
+
+```bash
+tail -n 30 /var/log/ai-note-deploy.log
+```
+
 ## 7. 回滚
 
 ```bash

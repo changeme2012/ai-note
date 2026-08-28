@@ -20,6 +20,12 @@ log() {
   printf '%s [%s] %s\n' "$(date '+%F %T')" "$APP_NAME" "$*"
 }
 
+# CentOS 7 ships Git 1.8.3, while the global `git -C` option was added
+# in Git 1.8.5. Run repository commands from a subshell for compatibility.
+git_repo() {
+  (cd "$REPO_DIR" && git "$@")
+}
+
 for required in git flock tar find sort awk readlink; do
   command -v "$required" >/dev/null 2>&1 || {
     log "ERROR: required command not found: $required"
@@ -40,8 +46,8 @@ if [[ ! -d "$REPO_DIR/.git" ]]; then
 fi
 
 log "Fetching origin/$BRANCH"
-git -C "$REPO_DIR" fetch --quiet --prune origin "$BRANCH"
-remote_sha="$(git -C "$REPO_DIR" rev-parse "origin/$BRANCH")"
+git_repo fetch --quiet --prune origin "$BRANCH"
+remote_sha="$(git_repo rev-parse "origin/$BRANCH")"
 deployed_sha=""
 [[ -f "$APP_ROOT/DEPLOYED_SHA" ]] && deployed_sha="$(<"$APP_ROOT/DEPLOYED_SHA")"
 
@@ -51,14 +57,14 @@ if [[ "$remote_sha" == "$deployed_sha" && -L "$CURRENT_LINK" ]]; then
 fi
 
 # Refuse to destroy edits made directly in the server checkout.
-git -C "$REPO_DIR" checkout --quiet "$BRANCH"
-git -C "$REPO_DIR" merge-base --is-ancestor HEAD "origin/$BRANCH" || {
+git_repo checkout --quiet "$BRANCH"
+git_repo merge-base --is-ancestor HEAD "origin/$BRANCH" || {
   log "ERROR: server checkout diverged from origin/$BRANCH; resolve manually."
   exit 1
 }
-git -C "$REPO_DIR" merge --quiet --ff-only "origin/$BRANCH"
+git_repo merge --quiet --ff-only "origin/$BRANCH"
 
-if ! git -C "$REPO_DIR" cat-file -e "${remote_sha}:${STATIC_DIR}/index.html" 2>/dev/null; then
+if ! git_repo cat-file -e "${remote_sha}:${STATIC_DIR}/index.html" 2>/dev/null; then
   log "ERROR: ${STATIC_DIR}/index.html does not exist in ${remote_sha:0:12}."
   log "Publish the static website under '$STATIC_DIR/' or change STATIC_DIR in the cron file."
   exit 1
@@ -79,7 +85,7 @@ cleanup_failed_release() {
 trap cleanup_failed_release EXIT
 
 # Export committed files only. This excludes .git, untracked files, and server edits.
-git -C "$REPO_DIR" archive "$remote_sha" "$STATIC_DIR" | tar -x -C "$release_dir"
+git_repo archive "$remote_sha" "$STATIC_DIR" | tar -x -C "$release_dir"
 published_dir="$release_dir/$STATIC_DIR"
 [[ -f "$published_dir/index.html" ]] || { log "ERROR: exported site is incomplete"; exit 1; }
 
@@ -111,4 +117,3 @@ done
 
 trap - EXIT
 log "Deployment complete: ${remote_sha:0:12} -> $published_dir"
-
