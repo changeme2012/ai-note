@@ -41,15 +41,24 @@ getenforce
 sudo yum install -y git nginx cronie util-linux tar policycoreutils-python
 ```
 
-## 2. 上传并安装脚本
+## 2. 从公有仓库安装脚本
 
-先将本目录中的文件放到服务器临时目录，例如 `/root/ai-note-deploy/`，然后执行：
+首次安装时直接通过 HTTPS 克隆公有仓库，不需要 GitHub Token 或 SSH Key：
 
 ```bash
-sudo install -m 0755 /root/ai-note-deploy/deploy.sh /usr/local/sbin/ai-note-deploy
-sudo install -m 0644 /root/ai-note-deploy/ai-note.cron /etc/cron.d/ai-note
-sudo install -m 0644 /root/ai-note-deploy/nginx.conf /etc/nginx/conf.d/ai-note.conf
+git clone https://github.com/changeme2012/ai-note.git /root/ai-note-bootstrap
+cd /root/ai-note-bootstrap
 ```
+
+安装部署脚本、Cron 和 Nginx 配置：
+
+```bash
+sudo install -m 0755 deploy-centos7/deploy.sh /usr/local/sbin/ai-note-deploy
+sudo install -m 0644 deploy-centos7/ai-note.cron /etc/cron.d/ai-note
+sudo install -m 0644 deploy-centos7/nginx.conf /etc/nginx/conf.d/ai-note.conf
+```
+
+此处的克隆只用于安装。正式运行时，`ai-note-deploy` 会维护 `/opt/ai-note/repo`，每次由 Cron 拉取 `main` 并原子发布 `site/`。
 
 ## 3. 配置 SELinux
 
@@ -115,4 +124,3 @@ sudo ls -1dt /opt/ai-note/releases/*
 sudo ln -s /opt/ai-note/releases/目标版本/site /opt/ai-note/current.rollback
 sudo mv -Tf /opt/ai-note/current.rollback /opt/ai-note/current
 ```
-
