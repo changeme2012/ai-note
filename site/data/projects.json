@@ -1,162 +1,173 @@
 {
-  "snapshotDate": "2026-09-20",
-  "thesis": "今天的 AI 热榜由可验证安全审计、计算机操作基础设施和工程化 Agent Skills 主导，同时出现面向 Agent 应用的共享 UI、受约束生成式界面与金融行业插件。值得关注的共同点是把权限、校验、人类签署和可观察状态放进产品表面；主要风险来自桌面控制、云资源、终端执行、金融数据连接器和模型生成 UI 的动作权限。",
-  "source": {
-    "name": "GitHub Trending + GitHub Repository API",
-    "url": "https://github.com/trending",
-    "capturedAt": "2026-09-21T03:07:45Z",
-    "note": "本期 10 个项目的 starsToday 均来自采集时 GitHub Trending 日榜。总 Star、许可证、README、根目录、发行版与最近推送来自 GitHub 仓库/API。周榜和月榜本次仍无法读取，因此不引用、不换算也不编造 7/30 日增长。"
-  },
+  "snapshotDate": "2026-09-21",
   "projects": [
-    {
-      "name": "cloudflare/security-audit-skill",
-      "url": "https://github.com/cloudflare/security-audit-skill",
-      "category": "Agent Skills",
-      "language": "JavaScript",
-      "stars": 18156,
-      "starsToday": 2428,
-      "effort": 3,
-      "badge": "今日领跑",
-      "description": "让编码 Agent 分阶段执行侦察、覆盖追踪、候选验证和独立复核，并输出机器可读安全发现。",
-      "tags": ["security-audit", "agent-skill", "verification"],
-      "fit": "希望把 AI 安全审查变成可审计流程的应用安全与研发团队",
-      "verdict": "MIT；日榜约 +2,428，但最近推送仍为 2026-09-14。仓库有验证器和测试；README 要求 OS 级沙箱、禁外网、环境变量白名单、资源限制与受控写目录，否则不得执行目标代码。"
-    },
     {
       "name": "trycua/cua",
       "url": "https://github.com/trycua/cua",
       "category": "AI Agent",
       "language": "HTML",
-      "stars": 25229,
-      "starsToday": 1018,
+      "stars": 25758,
+      "starsToday": 609,
       "effort": 4,
-      "badge": "连续热门",
-      "description": "提供跨系统桌面驱动、隔离云桌面、本地虚拟机、计算机操作模型和评测基准。",
-      "tags": ["computer-use", "desktop-agent", "benchmark"],
-      "fit": "需要构建、评测或批量运行计算机操作 Agent 的平台与研究团队",
-      "verdict": "MIT；日榜约 +1,018，2026-09-21 仍有推送。仓库有测试、SECURITY、CITATION 和无需 VM 的模拟基准；云 Fleet 可能持续计费，远程安装脚本与桌面控制权限需审查，模型、数据集和可选组件另有许可证。"
-    },
-    {
-      "name": "affaan-m/ECC",
-      "url": "https://github.com/affaan-m/ECC",
-      "category": "Agent Skills",
-      "language": "JavaScript",
-      "stars": 263859,
-      "starsToday": 826,
-      "effort": 3,
-      "badge": "重新上榜",
-      "description": "为多种编码 Agent 提供规划、测试、评审、记忆、安全扫描与持续改进的工程技能和 Hook。",
-      "tags": ["agent-harness", "skills", "quality-gates"],
-      "fit": "希望统一编码 Agent 流程、规则和质量门禁的开发团队",
-      "verdict": "MIT；日榜约 +826，最近推送为 2026-09-20。README 提供版本固定、dry-run、诊断、修复和卸载路径，并提醒只用官方来源、不要叠加安装；仍需审查 Hook、MCP、权限与写入范围。"
-    },
-    {
-      "name": "addyosmani/agent-skills",
-      "url": "https://github.com/addyosmani/agent-skills",
-      "category": "Agent Skills",
-      "language": "JavaScript",
-      "stars": 97762,
-      "starsToday": 736,
-      "effort": 2,
-      "badge": "连续热门",
-      "description": "把规格、计划、实现、测试、评审、性能和发布流程封装成跨编码 Agent 的工程 Skills。",
-      "tags": ["agent-skills", "software-engineering", "quality-gates"],
-      "fit": "希望让编码 Agent 遵循统一工程流程的小团队",
-      "verdict": "MIT；日榜约 +736，最近推送为 2026-09-20。模板不能替代项目测试；安装前应固定提交并审查 Hook、脚本和外部工具权限。"
-    },
-    {
-      "name": "higgsfield-ai/higgsfield",
-      "url": "https://github.com/higgsfield-ai/higgsfield",
-      "category": "AI 工程",
-      "language": "Jupyter Notebook",
-      "stars": 5428,
-      "starsToday": 465,
-      "effort": 5,
-      "badge": "连续热门",
-      "description": "面向大模型多节点训练的 GPU 调度与训练框架，支持 ZeRO-3、FSDP、实验队列和 GitHub Actions。",
-      "tags": ["distributed-training", "gpu-orchestration", "llm"],
-      "fit": "已有多节点 GPU、需要统一实验部署和复现环境的训练团队",
-      "verdict": "Apache-2.0；日榜约 +465，最近推送仍为 2026-09-14。README 有固定版本安装、训练样例、设置与教程；节点要求无密码 sudo、SSH 和部署密钥，最近正式发行版仍是 2024 年的 v0.0.4-rc，上生产前应核验维护状态。"
-    },
-    {
-      "name": "anthropics/claude-code",
-      "url": "https://github.com/anthropics/claude-code",
-      "category": "AI Agent",
-      "language": "TypeScript",
-      "stars": 147189,
-      "starsToday": 419,
-      "effort": 2,
-      "badge": "连续热门",
-      "description": "运行在终端中的编码 Agent，可理解代码库、执行任务、解释代码并处理 Git 工作流。",
-      "tags": ["coding-agent", "cli", "software-engineering"],
-      "fit": "希望在终端中使用成熟编码 Agent、并愿意审查其命令与数据边界的开发者",
-      "verdict": "GitHub API 未识别 SPDX 许可证；日榜约 +419，最近推送为 2026-09-20。README 说明会收集使用与反馈相关数据，并链接商业条款和隐私政策；安装脚本、代码上传、命令执行和凭据暴露需按组织政策审查。"
-    },
-    {
-      "name": "coder/coder",
-      "url": "https://github.com/coder/coder",
-      "category": "AI 工程",
-      "language": "Go",
-      "stars": 16099,
-      "starsToday": 379,
-      "effort": 5,
-      "badge": "连续热门",
-      "description": "用 Terraform 定义自托管云开发环境，并让编码 Agent 在隔离工作区中运行。",
-      "tags": ["dev-environment", "sandbox", "coding-agent"],
-      "fit": "需要集中治理开发与 Agent 工作区、身份和模型凭据的工程平台团队",
-      "verdict": "AGPL-3.0；日榜约 +379，2026-09-21 仍有推送。README 强调 WireGuard、自动关停、操作身份和模型密钥不下发到工作区；基础设施、Terraform、网络、存储和企业功能带来较高运维与许可评估成本。"
-    },
-    {
-      "name": "vercel-labs/json-render",
-      "url": "https://github.com/vercel-labs/json-render",
-      "category": "AI 工程",
-      "language": "TypeScript",
-      "stars": 17407,
-      "starsToday": 291,
-      "effort": 2,
-      "badge": "值得动手",
-      "description": "让模型在开发者定义的组件目录和约束内生成 JSON 规格，再渲染为 Web、移动端、视频、PDF、邮件或终端 UI。",
-      "tags": ["generative-ui", "structured-output", "frontend"],
-      "fit": "希望构建可流式、可校验且不允许模型任意输出代码的生成式 UI 团队",
-      "verdict": "Apache-2.0；日榜约 +291，9 月 18 日发布 v0.21.0。仓库有 tests、锁文件、示例与多渲染器；安全性取决于组件目录、动作白名单、动态属性与服务端校验，实验性 Jev 组合功能不宜直接用于生产。"
-    },
-    {
-      "name": "anthropics/financial-services",
-      "url": "https://github.com/anthropics/financial-services",
-      "category": "Agent Skills",
-      "language": "Python",
-      "stars": 35427,
-      "starsToday": 260,
-      "effort": 4,
-      "badge": "新上榜",
-      "description": "为投行、股票研究、私募与财富管理提供可安装的 Agents、Skills、命令和金融数据连接器。",
-      "tags": ["finance", "agent-plugins", "mcp"],
-      "fit": "需要把金融分析流程固化为可审查插件、且具备合规与专业复核能力的机构",
-      "verdict": "Apache-2.0；日榜约 +260，最近推送为 2026-09-18。README 明确不构成投资、法律、税务或会计建议，输出需专业人士签署且不执行交易；11 个连接器、Microsoft 365 管理权限和研究预览子 Agent 必须最小授权并留痕。"
+      "badge": "今日领跑",
+      "description": "提供计算机操作 Agent 的桌面驱动、隔离运行环境、跨系统 Fleet 与训练评测基准。",
+      "tags": ["computer-use", "desktop-agent", "evaluation"],
+      "fit": "构建、评测或批量运行计算机操作 Agent 的平台与研究团队",
+      "verdict": "MIT；日榜约 +609，2026-09-22 UTC 仍有推送。云端 Fleet、远程安装和桌面控制会扩大权限与计费面，模型和数据集还需分别核查许可。"
     },
     {
       "name": "BuilderIO/agent-native",
       "url": "https://github.com/BuilderIO/agent-native",
       "category": "AI Agent",
       "language": "TypeScript",
-      "stars": 5305,
-      "starsToday": 98,
+      "stars": 6012,
+      "starsToday": 607,
+      "effort": 3,
+      "badge": "增长突出",
+      "description": "用共享动作、数据和应用状态构建带可视界面、审批与多人协作的 Agent 应用。",
+      "tags": ["agent-ui", "human-in-the-loop", "typescript"],
+      "fit": "希望把 Agent 能力、权限与人工复核放进同一产品界面的应用团队",
+      "verdict": "日榜约 +607，2026-09-22 UTC 仍有推送；仓库有 E2E、锁文件和开发文档。README 声明 MIT，但 GitHub API 未识别 SPDX、根目录未发现 LICENSE，商用前需确认；共享动作必须服务端鉴权。"
+    },
+    {
+      "name": "coder/coder",
+      "url": "https://github.com/coder/coder",
+      "category": "AI 工程",
+      "language": "Go",
+      "stars": 16463,
+      "starsToday": 460,
+      "effort": 5,
+      "badge": "隔离环境",
+      "description": "使用 Terraform 定义自托管云开发环境，让开发者和编码 Agent 在受治理工作区运行。",
+      "tags": ["workspace", "sandbox", "terraform"],
+      "fit": "需要统一治理开发工作区、身份、网络和模型凭据的平台团队",
+      "verdict": "AGPL-3.0；日榜约 +460，2026-09-22 UTC 仍有推送。隔离效果取决于模板、云权限和网络策略，部署与运维成本高，企业功能另需评估。"
+    },
+    {
+      "name": "anthropics/financial-services",
+      "url": "https://github.com/anthropics/financial-services",
+      "category": "Agent Skills",
+      "language": "Python",
+      "stars": 35883,
+      "starsToday": 424,
+      "effort": 4,
+      "badge": "行业工作流",
+      "description": "为投行、研究、私募和财富管理提供 Agents、Skills、命令与金融数据连接器。",
+      "tags": ["finance", "agent-skills", "mcp"],
+      "fit": "具备合规、权限治理和专业复核能力的金融机构",
+      "verdict": "Apache-2.0；日榜约 +424，2026-09-21 UTC 有推送。项目明确不构成投资、法律、税务或会计建议，输出须专业人员签署且不得自动交易；连接器和 Microsoft 365 权限应最小化。"
+    },
+    {
+      "name": "Crosstalk-Solutions/project-nomad",
+      "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+      "category": "AI 工程",
+      "language": "TypeScript",
+      "stars": 37923,
+      "starsToday": 394,
+      "effort": 4,
+      "badge": "离线知识站",
+      "description": "在自有硬件上部署离线知识与教育服务器，并可接入本地 Ollama 或兼容模型服务。",
+      "tags": ["offline-first", "local-ai", "knowledge-server"],
+      "fit": "需要断网知识访问、课堂或应急教育节点的团队与个人",
+      "verdict": "Apache-2.0；日榜约 +394，2026-09-21 UTC 有推送，最新正式版 v1.34.1。默认没有身份认证，官方明确不建议直接暴露到互联网；安装会拉取容器和可选模型，需预留磁盘并实施网络隔离。"
+    },
+    {
+      "name": "zhouxiaoka/autoclip",
+      "url": "https://github.com/zhouxiaoka/autoclip",
+      "category": "AI 工程",
+      "language": "Python",
+      "stars": 8358,
+      "starsToday": 250,
+      "effort": 3,
+      "badge": "视频工作流",
+      "description": "从字幕识别话题与高光，自动生成短视频片段、标题和多平台导出版本。",
+      "tags": ["video", "highlight", "mcp"],
+      "fit": "处理访谈、播客、课程和直播回放的内容团队与个人创作者",
+      "verdict": "MIT；日榜约 +250，2026-09-22 UTC 仍有推送，v1.3.1 提供桌面、Docker、CLI 与 MCP 路径。云模型会接收字幕文本，下载与二创还涉及平台条款、素材版权和本地磁盘成本。"
+    },
+    {
+      "name": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "category": "AI 工程",
+      "language": "Rust",
+      "stars": 7768,
+      "starsToday": 167,
       "effort": 3,
       "badge": "新上榜",
-      "description": "用共享动作、共享数据和共享应用状态构建带可视界面、审批与多人协作的 Agent 应用。",
-      "tags": ["agent-app", "shared-actions", "human-in-the-loop"],
-      "fit": "希望把 Agent 能力、权限、状态和人类复核放进同一应用界面的产品团队",
-      "verdict": "日榜约 +98，2026-09-21 仍有推送。仓库有 E2E、锁文件、开发文档和正式工具包版本；README 声明 MIT，但 GitHub API 未识别 SPDX，根目录也未发现 LICENSE 文件，商用前需向维护者确认。权限和动作校验仍由应用开发者正确配置。"
+      "description": "以 Git 版本化 Markdown 为事实源，为多种编码 Agent 提供跨会话、跨机器和跨工具的长期记忆与交接。",
+      "tags": ["memory", "handoff", "mcp"],
+      "fit": "频繁切换编码 Agent、希望自托管并审计上下文的个人和团队",
+      "verdict": "MIT；日榜约 +167，2026-09-22 UTC 仍有推送并发布 v2.4.0。仓库有锁文件、测试、评测、数据处理和安全文档；生命周期 Hook 会记录提示与工具事件，接入真实项目之前必须验证脱敏、保留和访问控制。"
+    },
+    {
+      "name": "cloudflare/security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "category": "Agent Skills",
+      "language": "JavaScript",
+      "stars": 19103,
+      "starsToday": 0,
+      "effort": 3,
+      "badge": "延续观察",
+      "description": "让编码 Agent 分阶段执行侦察、覆盖追踪、候选验证和独立复核，并输出机器可读安全发现。",
+      "tags": ["security-audit", "agent-skill", "verification"],
+      "fit": "希望把 AI 安全审查变成可审计流程的应用安全与研发团队",
+      "verdict": "MIT；本期未在采集到的日榜中，starsToday 记为 0，最近推送仍为 2026-09-14。运行目标代码前必须具备 OS 级沙箱、禁外网、环境变量白名单和资源限制。"
+    },
+    {
+      "name": "vercel-labs/json-render",
+      "url": "https://github.com/vercel-labs/json-render",
+      "category": "AI 工程",
+      "language": "TypeScript",
+      "stars": 17966,
+      "starsToday": 0,
+      "effort": 2,
+      "badge": "值得动手",
+      "description": "让模型在开发者定义的组件目录和约束内生成 JSON 规格，再渲染为多种界面。",
+      "tags": ["generative-ui", "schema", "typescript"],
+      "fit": "希望构建可流式、可校验生成式 UI 的产品团队",
+      "verdict": "Apache-2.0；本期未在采集到的日榜中，starsToday 记为 0，2026-09-21 UTC 有推送。安全性取决于组件目录、动作白名单和服务端授权；实验功能不宜直接进入生产。"
+    },
+    {
+      "name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "category": "Agent Skills",
+      "language": "JavaScript",
+      "stars": 98177,
+      "starsToday": 0,
+      "effort": 2,
+      "badge": "连续热门",
+      "description": "把规格、实现、测试、评审、性能和发布流程封装为可复用工程技能。",
+      "tags": ["agent-skills", "workflow", "testing"],
+      "fit": "想快速建立编码 Agent 标准工作流的小团队",
+      "verdict": "MIT；本期未在采集到的日榜中，starsToday 记为 0，最近推送为 2026-09-20。模板不能替代项目测试，安装前应固定提交并审查 Hook、脚本和外部工具权限。"
     }
   ],
   "learningPath": [
-    {"title": "10 分钟：定义受限组件目录", "description": "为一个订单摘要界面只注册 Card、Text、Badge 和 Button，给每个属性建立 schema，并明确禁止任意 HTML、脚本和外部 URL。"},
-    {"title": "15 分钟：生成与渲染", "description": "用 json-render 的快速开始创建三份 JSON 规格：正常订单、缺失字段和恶意动作请求；保留原始模型输出。"},
-    {"title": "15 分钟：加入动作门禁", "description": "只允许 copy_order_id 和 request_review 两个动作，在服务端复核参数、用户身份和对象权限，未知动作一律拒绝。"},
-    {"title": "10 分钟：写回归测试", "description": "验证未知组件、额外属性、javascript URL、越权对象和未确认的高风险动作都不能渲染或执行，并记录版本与测试结果。"}
+    {
+      "title": "10 分钟：建立无敏感信息的测试仓库",
+      "description": "创建一个只含虚构架构、待办和失败尝试的小仓库，不放真实凭据、客户数据或内部代码；列出允许进入记忆的数据类别。"
+    },
+    {
+      "title": "15 分钟：启动最小 ai-memory",
+      "description": "按 README 使用容器仅绑定 127.0.0.1，以零 LLM 模式启动；固定 v2.4.0 并验证数据目录、进程用户和端口暴露。"
+    },
+    {
+      "title": "15 分钟：做跨 Agent 交接",
+      "description": "在第一个客户端记录一个设计决定和失败方案，再从第二个兼容客户端读取交接；检查 Markdown 事实源、检索结果和认领状态。"
+    },
+    {
+      "title": "10 分钟：审计与清除",
+      "description": "检查审计日志和捕获内容，尝试注入伪造密钥确认脱敏，再执行项目级清除并验证文件、索引与备份中的残留。"
+    }
   ],
   "practice": {
-    "title": "做一次生成式 UI 的白名单安全演练",
-    "description": "使用 json-render 构建四组件订单摘要，要求模型只能输出受 schema 约束的 JSON；为动作增加服务端白名单和确认步骤，再用五个恶意或错误规格验证拒绝路径。"
+    "title": "做一次 Agent 记忆隐私边界演练",
+    "description": "在一次性仓库和仅回环地址的容器中运行 ai-memory，使用虚构提示完成跨客户端交接；记录捕获字段、脱敏结果、访问边界、清除效果和失败条件，不接入真实项目或真实凭据。"
+  },
+  "source": {
+    "name": "GitHub Trending + GitHub Repository API",
+    "url": "https://github.com/trending",
+    "capturedAt": "2026-09-22T03:23:21Z",
+    "note": "本期 7 个项目的 starsToday 来自采集时 GitHub Trending 日榜，3 个延续观察项目未在采集到的日榜中，starsToday 明确记为 0。总 Star、许可证、README、根目录、发行版与最近推送来自 GitHub 仓库/API。周榜和月榜本次仍无法读取，因此不引用、不换算也不编造 7/30 日增长。"
   }
 }
