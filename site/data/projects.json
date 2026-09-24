@@ -1,10 +1,10 @@
 {
-  "snapshotDate": "2026-09-22",
+  "snapshotDate": "2026-09-23",
   "source": {
     "name": "GitHub Trending + GitHub Repository API",
     "url": "https://github.com/trending",
-    "capturedAt": "2026-09-23T03:25:00Z",
-    "note": "本期 7 个项目的 starsToday 来自采集时 GitHub Trending 日榜，3 个延续观察项目未在采集到的日榜中，starsToday 明确记为 0。总 Star、许可证、README、根目录、发行版与最近推送来自 GitHub 仓库/API。周榜和月榜本次仍无法读取，因此不引用、不换算也不编造 7/30 日增长。"
+    "capturedAt": "2026-09-24T03:15:08Z",
+    "note": "本期 10 个项目的 starsToday 均来自采集时 GitHub Trending 日榜。总 Star、许可证、README、根目录与最近推送来自 GitHub 仓库/API。周榜和月榜仍无法可靠读取，因此不引用、不换算也不编造 7/30 日增长。"
   },
   "projects": [
     {
@@ -12,162 +12,162 @@
       "url": "https://github.com/google/ax",
       "category": "AI 工程",
       "language": "Go",
-      "stars": 7799,
-      "starsToday": 2305,
+      "stars": 9228,
+      "starsToday": 1543,
       "effort": 5,
       "badge": "今日领跑",
       "description": "以类似 Kubernetes 的声明式资源编排 Agent 工作区、任务、网关、模型配置和暂停恢复。",
       "tags": ["agent-orchestration", "kubernetes", "sandbox"],
-      "fit": "需要统一调度大规模 Agent 工作区、网络出口和模型凭据的平台团队",
-      "verdict": "Apache-2.0；日榜约 +2,305，2026-09-20 发布 v0.3.0。概念和协议仍在演进，稳定版前可能有重大破坏性变更；生产使用还需审查 Kubernetes、网关白名单和密钥注入。"
-    },
-    {
-      "name": "anthropics/financial-services",
-      "url": "https://github.com/anthropics/financial-services",
-      "category": "Agent Skills",
-      "language": "Python",
-      "stars": 36444,
-      "starsToday": 438,
-      "effort": 4,
-      "badge": "连续热门",
-      "description": "为投行、研究、私募与财富管理提供 Agents、Skills、命令及金融数据连接器。",
-      "tags": ["finance", "skills", "compliance"],
-      "fit": "具备合规、权限治理和专业复核能力的金融机构",
-      "verdict": "Apache-2.0；日榜约 +438，2026-09-21 UTC 有推送。README 明确不构成投资、法律、税务或会计建议，输出须由专业人员签署且不得自动交易。"
+      "fit": "需要统一调度 Agent 工作区、网络出口和模型凭据的平台团队",
+      "verdict": "Apache-2.0；日榜约 +1,543，2026-09-23 UTC 有推送。概念和协议仍在演进，稳定版前可能有重大破坏性变更；生产采用需审查网关白名单、Secret 注入和调试入口。"
     },
     {
       "name": "dream-num/univer",
       "url": "https://github.com/dream-num/univer",
       "category": "AI 工程",
       "language": "TypeScript",
-      "stars": 15593,
-      "starsToday": 255,
+      "stars": 16414,
+      "starsToday": 1142,
       "effort": 3,
-      "badge": "新上榜",
+      "badge": "连续热门",
       "description": "可扩展的表格、文档和幻灯片 Office SDK，让人员与 Agent 在同一文件中协作。",
       "tags": ["office-sdk", "spreadsheet", "agent-ui"],
       "fit": "希望把 AI 助手嵌入表格、文档或协作应用的前端与产品团队",
-      "verdict": "Apache-2.0；日榜约 +255，2026-09-22 UTC 有推送，仓库含测试、示例和锁文件。部分协作、修订与服务能力属于 Web SDK 或 Pro 包，部署前需逐包核查功能与许可。"
-    },
-    {
-      "name": "agent-substrate/substrate",
-      "url": "https://github.com/agent-substrate/substrate",
-      "category": "AI 工程",
-      "language": "Go",
-      "stars": 3042,
-      "starsToday": 245,
-      "effort": 5,
-      "badge": "新上榜",
-      "description": "面向 Agent 的安全运行时，以 microVM 或 gVisor 管理沙箱、网络出口、暂停恢复与多租户。",
-      "tags": ["runtime", "microvm", "sandbox"],
-      "fit": "构建多租户 Agent 执行平台、重视隔离与可观测性的基础设施团队",
-      "verdict": "Apache-2.0；日榜约 +245，2026-09-22 UTC 有推送，提供 kind/GKE 演示和认证、出口、可观测性文档。项目明确处于早期开发，不可视为生产就绪，API 可能破坏性变化。"
-    },
-    {
-      "name": "superdesigndev/treg",
-      "url": "https://github.com/superdesigndev/treg",
-      "category": "AI 工程",
-      "language": "Python",
-      "stars": 2286,
-      "starsToday": 230,
-      "effort": 3,
-      "badge": "新上榜",
-      "description": "为 Agent 提供统一工具注册表、MCP/CLI 代理、服务端凭据注入和外部 API 计费调用。",
-      "tags": ["tool-registry", "mcp", "credentials"],
-      "fit": "需要集中管理 Agent 工具目录、凭据和调用成本的平台团队",
-      "verdict": "日榜约 +230，2026-09-23 UTC 有推送；GitHub API 未识别标准 SPDX，许可证为 Apache-2.0 加禁止向第三方提供托管服务的附加条款。托管模式持有组织凭据并默认采集匿名用量，安装脚本与遥测需先审计。"
+      "verdict": "Apache-2.0；日榜约 +1,142，2026-09-24 UTC 有推送，仓库含测试、示例和锁文件。部分协作、修订与服务能力属于 Web SDK 或 Pro 包，部署前需逐包核查功能与许可。"
     },
     {
       "name": "browser-use/video-use",
       "url": "https://github.com/browser-use/video-use",
       "category": "Agent Skills",
       "language": "Python",
-      "stars": 25944,
-      "starsToday": 191,
+      "stars": 26558,
+      "starsToday": 746,
       "effort": 3,
-      "badge": "新上榜",
+      "badge": "连续热门",
       "description": "面向编码 Agent 的视频编辑 Skill，组合 FFmpeg、转录、下载和动画辅助工具。",
       "tags": ["video", "skill", "ffmpeg"],
       "fit": "希望让编码 Agent 执行可重复视频剪辑流程的内容团队与开发者",
-      "verdict": "MIT；日榜约 +191，但最近推送停留在 2026-08-30，活跃度弱于其他新上榜项目。安装会引导 Agent 克隆、装依赖并注册 Skill；ElevenLabs 转录付费、.env 密钥和素材版权均需单独控制。"
+      "verdict": "MIT；日榜约 +746，但最近推送仍停留在 2026-08-30，代码活跃度弱于热度。安装会引导 Agent 克隆、装依赖并注册 Skill；转录付费、.env 密钥、下载来源和素材版权需单独控制。"
+    },
+    {
+      "name": "anthropics/financial-services",
+      "url": "https://github.com/anthropics/financial-services",
+      "category": "Agent Skills",
+      "language": "Python",
+      "stars": 37014,
+      "starsToday": 664,
+      "effort": 4,
+      "badge": "连续热门",
+      "description": "为投行、研究、私募与财富管理提供 Agents、Skills、命令及金融数据连接器。",
+      "tags": ["finance", "skills", "compliance"],
+      "fit": "具备合规、权限治理和专业复核能力的金融机构",
+      "verdict": "Apache-2.0；日榜约 +664，最近推送为 2026-09-21。README 明确不构成投资、法律、税务或会计建议，输出须由专业人员签署且不得自动交易。"
+    },
+    {
+      "name": "agent-substrate/substrate",
+      "url": "https://github.com/agent-substrate/substrate",
+      "category": "AI 工程",
+      "language": "Go",
+      "stars": 3539,
+      "starsToday": 558,
+      "effort": 5,
+      "badge": "连续热门",
+      "description": "面向 Agent 的安全运行时，以 microVM 或 gVisor 管理沙箱、网络出口、暂停恢复与多租户。",
+      "tags": ["runtime", "microvm", "sandbox"],
+      "fit": "构建多租户 Agent 执行平台、重视隔离与可观测性的基础设施团队",
+      "verdict": "Apache-2.0；日榜约 +558，2026-09-24 UTC 有推送，提供 kind/GKE 演示和认证、出口、可观测性文档。项目明确处于早期开发，不可视为生产就绪，API 可能破坏性变化。"
+    },
+    {
+      "name": "superdesigndev/treg",
+      "url": "https://github.com/superdesigndev/treg",
+      "category": "AI 工程",
+      "language": "Python",
+      "stars": 2766,
+      "starsToday": 506,
+      "effort": 3,
+      "badge": "连续热门",
+      "description": "为 Agent 提供统一工具注册表、MCP/CLI 代理、服务端凭据注入和外部 API 计费调用。",
+      "tags": ["tool-registry", "mcp", "credentials"],
+      "fit": "需要集中管理 Agent 工具目录、凭据和调用成本的平台团队",
+      "verdict": "日榜约 +506，2026-09-24 UTC 有推送；GitHub API 未识别标准 SPDX，许可证为 Apache-2.0 加禁止向第三方提供托管服务的附加条款。托管模式持有组织凭据，安装脚本、遥测和预付费调用都应先审计。"
+    },
+    {
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "category": "Agent Skills",
+      "language": "Shell",
+      "stars": 290753,
+      "starsToday": 474,
+      "effort": 2,
+      "badge": "新上榜",
+      "description": "为多种编码 Agent 提供规格澄清、计划、TDD、子 Agent 执行与评审的方法论和可组合技能。",
+      "tags": ["coding-agent", "tdd", "workflow"],
+      "fit": "希望把编码 Agent 工作流标准化并愿意审计自动触发技能的团队",
+      "verdict": "MIT；日榜约 +474，最近推送为 2026-09-22。仓库有测试和多客户端插件，但技能会自动触发并包含 Hooks、脚本与安装路径；应固定提交、逐项审查并避免同时安装重复插件。"
     },
     {
       "name": "davila7/claude-code-templates",
       "url": "https://github.com/davila7/claude-code-templates",
       "category": "Agent Skills",
       "language": "Python",
-      "stars": 31182,
-      "starsToday": 64,
+      "stars": 31539,
+      "starsToday": 389,
       "effort": 2,
-      "badge": "新上榜",
+      "badge": "连续热门",
       "description": "聚合并管理 Claude Code Agents、命令、Hooks、MCP、设置、分析与健康检查。",
       "tags": ["claude-code", "templates", "supply-chain"],
       "fit": "需要快速试用 Claude Code 配置并愿意逐项审计来源的开发者",
-      "verdict": "MIT；日榜约 +64，2026-09-23 UTC 有推送。仓库本身有代码、文档和锁文件，但目录聚合大量第三方组件，各自保留原许可；Hooks、MCP、远程隧道和 npx 安装构成供应链风险。"
+      "verdict": "MIT；日榜约 +389，2026-09-24 UTC 有推送。仓库本身有代码、文档和锁文件，但目录聚合大量第三方组件，各自保留原许可；Hooks、MCP、远程隧道和 npx 安装构成供应链风险。"
     },
     {
-      "name": "akitaonrails/ai-memory",
-      "url": "https://github.com/akitaonrails/ai-memory",
+      "name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "category": "Agent Skills",
+      "language": "JavaScript",
+      "stars": 70402,
+      "starsToday": 304,
+      "effort": 2,
+      "badge": "新上榜",
+      "description": "为 AI 编码工具提供设计语言、24 个命令、浏览器迭代和 61 条确定性前端检测规则。",
+      "tags": ["frontend-design", "skill", "audit"],
+      "fit": "希望提高生成式前端设计一致性、可访问性和验收质量的产品团队",
+      "verdict": "Apache-2.0；日榜约 +304，2026-09-24 UTC 有推送，仓库含测试、锁文件和多客户端构建。安装器会写入多种 Agent 目录、配置 Hooks，并可能下载本地二进制；需固定版本、核验来源并按工具批准 Hook。"
+    },
+    {
+      "name": "DeusData/codebase-memory-mcp",
+      "url": "https://github.com/DeusData/codebase-memory-mcp",
       "category": "AI 工程",
-      "language": "Rust",
-      "stars": 8120,
-      "starsToday": 0,
+      "language": "C",
+      "stars": 44623,
+      "starsToday": 190,
       "effort": 3,
-      "badge": "延续观察",
-      "description": "以 Git 版本化 Markdown 为事实源，为多种编码 Agent 提供跨会话、跨机器的长期记忆和交接。",
-      "tags": ["memory", "handoff", "privacy"],
-      "fit": "频繁切换编码 Agent、希望自托管并审计上下文的个人和团队",
-      "verdict": "MIT；未进入采集到的日榜，starsToday 记为 0，但 2026-09-22 UTC 仍有推送。自动捕获提示和工具事件会持久化敏感上下文，脱敏、保留、删除和访问控制必须先用虚构数据验证。"
-    },
-    {
-      "name": "trycua/cua",
-      "url": "https://github.com/trycua/cua",
-      "category": "AI Agent",
-      "language": "HTML",
-      "stars": 26008,
-      "starsToday": 0,
-      "effort": 4,
-      "badge": "连续热门",
-      "description": "提供计算机操作 Agent 的桌面驱动、隔离运行环境、跨系统 Fleet 与训练评测基准。",
-      "tags": ["computer-use", "desktop-agent", "evaluation"],
-      "fit": "构建、评测或批量运行计算机操作 Agent 的平台与研究团队",
-      "verdict": "MIT；未进入采集到的日榜，starsToday 记为 0，但 2026-09-23 UTC 仍有推送。云端 Fleet、远程安装和桌面控制会扩大权限与计费面，模型与数据集仍需分别核查许可。"
-    },
-    {
-      "name": "BuilderIO/agent-native",
-      "url": "https://github.com/BuilderIO/agent-native",
-      "category": "AI Agent",
-      "language": "TypeScript",
-      "stars": 6328,
-      "starsToday": 0,
-      "effort": 3,
-      "badge": "延续观察",
-      "description": "用共享动作、数据和应用状态构建带界面、审批与多人协作的 Agent 应用。",
-      "tags": ["agent-ui", "human-in-the-loop", "collaboration"],
-      "fit": "希望把 Agent 能力、权限和人工复核放进同一产品界面的应用团队",
-      "verdict": "未进入采集到的日榜，starsToday 记为 0；2026-09-23 UTC 仍有推送。README 声明 MIT，但 GitHub API 未识别许可证且根目录未发现 LICENSE，商用前需确认；共享动作必须服务端鉴权。"
+      "badge": "新上榜",
+      "description": "本地代码智能 MCP，以 tree-sitter 与持久知识图索引函数、调用链、路由和跨服务关系。",
+      "tags": ["mcp", "code-intelligence", "knowledge-graph"],
+      "fit": "需要本地代码库结构检索、影响分析和跨 Agent 共享索引的开发团队",
+      "verdict": "MIT；日榜约 +190，2026-09-24 UTC 有推送，仓库含源码、测试、SECURITY 与第三方声明。README 性能与测试数字为项目方自报；一键安装会修改多个 Agent 配置、启动后台协调进程并索引代码，应先核验发布哈希并使用隔离副本。"
     }
   ],
   "learningPath": [
     {
-      "title": "10 分钟：读懂控制面与运行时边界",
-      "description": "对照 Ax 的 Workspace、Task、Gateway 与 Substrate 的 Sandbox、认证、出口控制，画出控制面、数据面、模型服务和外部工具的信任边界。"
+      "title": "10 分钟：列安装面",
+      "description": "对 Superpowers、Impeccable 和 claude-code-templates 分别列出会写入的目录、Hook、脚本、MCP、二进制和外部服务，不执行安装。"
     },
     {
-      "title": "15 分钟：写最小声明式清单",
-      "description": "参考 Ax 示例写一个仅允许访问代码仓库与模型 API 的 Workspace/Task/Gateway 草案；使用虚构 Secret 名称，不放真实凭据，也不启动真实云资源。"
+      "title": "15 分钟：固定来源并做静态检查",
+      "description": "记录仓库提交 SHA、许可证与第三方组件来源，检查安装脚本、Hook 清单、网络下载、遥测和卸载路径。"
     },
     {
-      "title": "15 分钟：做静态越权测试",
-      "description": "向任务加入未批准域名、额外端口和调试 SSH，逐项记录策略应拒绝的位置；检查出站白名单、密钥注入和暂停恢复是否有明确审计事件。"
+      "title": "15 分钟：最小权限沙箱测试",
+      "description": "在一次性仓库中只启用一个技能，禁用真实凭据和生产网络，观察其文件修改、子进程、端口、环境变量与 Agent 配置变化。"
     },
     {
-      "title": "10 分钟：定义生产门禁",
-      "description": "列出版本固定、资源上限、镜像来源、租户隔离、日志脱敏、紧急停止和回滚条件；明确 Ax 与 Substrate 仍处早期阶段，不直接承载生产工作负载。"
+      "title": "10 分钟：形成准入卡",
+      "description": "写明允许版本、文件写入、网络目的地、回滚步骤、审查责任人和拒绝条件，再决定是否进入团队模板。"
     }
   ],
   "practice": {
-    "title": "做一次 Agent 沙箱最小出站白名单演练",
-    "description": "仅基于 Ax 与 Substrate 的文档和示例，在本地编写一个不含真实凭据的 Workspace、Task 与 Gateway 清单；加入一个未批准域名验证审查流程能拦截，产出信任边界图、允许清单、拒绝案例和上线前门禁，不创建真实云资源。"
+    "title": "制作一张 Agent 技能供应链审计卡",
+    "description": "任选 Superpowers、Impeccable 或 claude-code-templates，在一次性仓库中固定提交，只做静态检查和无凭据沙箱安装；记录 Hook、脚本、下载、遥测、配置修改、第三方许可证及完整卸载结果，产出允许清单和拒绝条件。"
   }
 }
