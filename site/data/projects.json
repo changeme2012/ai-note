@@ -1,173 +1,173 @@
 {
-  "snapshotDate": "2026-09-23",
+  "snapshotDate": "2026-09-24",
   "source": {
     "name": "GitHub Trending + GitHub Repository API",
     "url": "https://github.com/trending",
-    "capturedAt": "2026-09-24T03:15:08Z",
+    "capturedAt": "2026-09-25T03:24:08Z",
     "note": "本期 10 个项目的 starsToday 均来自采集时 GitHub Trending 日榜。总 Star、许可证、README、根目录与最近推送来自 GitHub 仓库/API。周榜和月榜仍无法可靠读取，因此不引用、不换算也不编造 7/30 日增长。"
   },
   "projects": [
+    {
+      "name": "vectorize-io/hindsight",
+      "url": "https://github.com/vectorize-io/hindsight",
+      "category": "AI 工程",
+      "language": "Python",
+      "stars": 27900,
+      "starsToday": 1668,
+      "effort": 4,
+      "badge": "今日领跑",
+      "description": "面向 Agent 的长期记忆系统，以 retain、recall、reflect 和独立 memory bank 管理结构化记忆。",
+      "tags": ["agent-memory", "rag", "self-hosted"],
+      "fit": "需要跨会话记忆、可控知识沉淀和多 Agent 记忆隔离的平台团队",
+      "verdict": "MIT；日榜约 +1,668，2026-09-25 UTC 有推送。仓库含测试、评测、SECURITY、Docker、Helm 与嵌入式运行路径；README 的基准和生产效果为项目方自报。真实部署前必须验证 bank/租户隔离、保留与删除、记忆投毒、日志脱敏及外部模型提供方的数据边界。"
+    },
     {
       "name": "google/ax",
       "url": "https://github.com/google/ax",
       "category": "AI 工程",
       "language": "Go",
-      "stars": 9228,
-      "starsToday": 1543,
+      "stars": 10570,
+      "starsToday": 1373,
       "effort": 5,
-      "badge": "今日领跑",
+      "badge": "连续热门",
       "description": "以类似 Kubernetes 的声明式资源编排 Agent 工作区、任务、网关、模型配置和暂停恢复。",
       "tags": ["agent-orchestration", "kubernetes", "sandbox"],
       "fit": "需要统一调度 Agent 工作区、网络出口和模型凭据的平台团队",
-      "verdict": "Apache-2.0；日榜约 +1,543，2026-09-23 UTC 有推送。概念和协议仍在演进，稳定版前可能有重大破坏性变更；生产采用需审查网关白名单、Secret 注入和调试入口。"
+      "verdict": "Apache-2.0；日榜约 +1,373，2026-09-25 UTC 有推送。概念和协议仍在演进，稳定版前可能有重大破坏性变更；生产采用需审查网关白名单、Secret 注入和调试入口。"
     },
     {
       "name": "dream-num/univer",
       "url": "https://github.com/dream-num/univer",
       "category": "AI 工程",
       "language": "TypeScript",
-      "stars": 16414,
-      "starsToday": 1142,
+      "stars": 17869,
+      "starsToday": 1082,
       "effort": 3,
       "badge": "连续热门",
       "description": "可扩展的表格、文档和幻灯片 Office SDK，让人员与 Agent 在同一文件中协作。",
       "tags": ["office-sdk", "spreadsheet", "agent-ui"],
       "fit": "希望把 AI 助手嵌入表格、文档或协作应用的前端与产品团队",
-      "verdict": "Apache-2.0；日榜约 +1,142，2026-09-24 UTC 有推送，仓库含测试、示例和锁文件。部分协作、修订与服务能力属于 Web SDK 或 Pro 包，部署前需逐包核查功能与许可。"
-    },
-    {
-      "name": "browser-use/video-use",
-      "url": "https://github.com/browser-use/video-use",
-      "category": "Agent Skills",
-      "language": "Python",
-      "stars": 26558,
-      "starsToday": 746,
-      "effort": 3,
-      "badge": "连续热门",
-      "description": "面向编码 Agent 的视频编辑 Skill，组合 FFmpeg、转录、下载和动画辅助工具。",
-      "tags": ["video", "skill", "ffmpeg"],
-      "fit": "希望让编码 Agent 执行可重复视频剪辑流程的内容团队与开发者",
-      "verdict": "MIT；日榜约 +746，但最近推送仍停留在 2026-08-30，代码活跃度弱于热度。安装会引导 Agent 克隆、装依赖并注册 Skill；转录付费、.env 密钥、下载来源和素材版权需单独控制。"
-    },
-    {
-      "name": "anthropics/financial-services",
-      "url": "https://github.com/anthropics/financial-services",
-      "category": "Agent Skills",
-      "language": "Python",
-      "stars": 37014,
-      "starsToday": 664,
-      "effort": 4,
-      "badge": "连续热门",
-      "description": "为投行、研究、私募与财富管理提供 Agents、Skills、命令及金融数据连接器。",
-      "tags": ["finance", "skills", "compliance"],
-      "fit": "具备合规、权限治理和专业复核能力的金融机构",
-      "verdict": "Apache-2.0；日榜约 +664，最近推送为 2026-09-21。README 明确不构成投资、法律、税务或会计建议，输出须由专业人员签署且不得自动交易。"
-    },
-    {
-      "name": "agent-substrate/substrate",
-      "url": "https://github.com/agent-substrate/substrate",
-      "category": "AI 工程",
-      "language": "Go",
-      "stars": 3539,
-      "starsToday": 558,
-      "effort": 5,
-      "badge": "连续热门",
-      "description": "面向 Agent 的安全运行时，以 microVM 或 gVisor 管理沙箱、网络出口、暂停恢复与多租户。",
-      "tags": ["runtime", "microvm", "sandbox"],
-      "fit": "构建多租户 Agent 执行平台、重视隔离与可观测性的基础设施团队",
-      "verdict": "Apache-2.0；日榜约 +558，2026-09-24 UTC 有推送，提供 kind/GKE 演示和认证、出口、可观测性文档。项目明确处于早期开发，不可视为生产就绪，API 可能破坏性变化。"
-    },
-    {
-      "name": "superdesigndev/treg",
-      "url": "https://github.com/superdesigndev/treg",
-      "category": "AI 工程",
-      "language": "Python",
-      "stars": 2766,
-      "starsToday": 506,
-      "effort": 3,
-      "badge": "连续热门",
-      "description": "为 Agent 提供统一工具注册表、MCP/CLI 代理、服务端凭据注入和外部 API 计费调用。",
-      "tags": ["tool-registry", "mcp", "credentials"],
-      "fit": "需要集中管理 Agent 工具目录、凭据和调用成本的平台团队",
-      "verdict": "日榜约 +506，2026-09-24 UTC 有推送；GitHub API 未识别标准 SPDX，许可证为 Apache-2.0 加禁止向第三方提供托管服务的附加条款。托管模式持有组织凭据，安装脚本、遥测和预付费调用都应先审计。"
+      "verdict": "Apache-2.0；日榜约 +1,082，2026-09-24 UTC 有推送，仓库含测试、示例和锁文件。部分协作、修订与服务能力属于 Web SDK 或 Pro 包，部署前需逐包核查功能与许可。"
     },
     {
       "name": "obra/superpowers",
       "url": "https://github.com/obra/superpowers",
       "category": "Agent Skills",
       "language": "Shell",
-      "stars": 290753,
-      "starsToday": 474,
+      "stars": 291266,
+      "starsToday": 611,
       "effort": 2,
-      "badge": "新上榜",
+      "badge": "连续热门",
       "description": "为多种编码 Agent 提供规格澄清、计划、TDD、子 Agent 执行与评审的方法论和可组合技能。",
       "tags": ["coding-agent", "tdd", "workflow"],
       "fit": "希望把编码 Agent 工作流标准化并愿意审计自动触发技能的团队",
-      "verdict": "MIT；日榜约 +474，最近推送为 2026-09-22。仓库有测试和多客户端插件，但技能会自动触发并包含 Hooks、脚本与安装路径；应固定提交、逐项审查并避免同时安装重复插件。"
+      "verdict": "MIT；日榜约 +611，2026-09-25 UTC 有推送。仓库有测试和多客户端插件，但技能会自动触发并包含 Hooks、脚本与安装路径；应固定提交、逐项审查并避免重复插件互相覆盖。"
     },
     {
-      "name": "davila7/claude-code-templates",
-      "url": "https://github.com/davila7/claude-code-templates",
+      "name": "anthropics/financial-services",
+      "url": "https://github.com/anthropics/financial-services",
       "category": "Agent Skills",
       "language": "Python",
-      "stars": 31539,
-      "starsToday": 389,
-      "effort": 2,
+      "stars": 37382,
+      "starsToday": 509,
+      "effort": 4,
       "badge": "连续热门",
-      "description": "聚合并管理 Claude Code Agents、命令、Hooks、MCP、设置、分析与健康检查。",
-      "tags": ["claude-code", "templates", "supply-chain"],
-      "fit": "需要快速试用 Claude Code 配置并愿意逐项审计来源的开发者",
-      "verdict": "MIT；日榜约 +389，2026-09-24 UTC 有推送。仓库本身有代码、文档和锁文件，但目录聚合大量第三方组件，各自保留原许可；Hooks、MCP、远程隧道和 npx 安装构成供应链风险。"
+      "description": "为投行、研究、私募与财富管理提供 Agents、Skills、命令及金融数据连接器。",
+      "tags": ["finance", "skills", "compliance"],
+      "fit": "具备合规、权限治理和专业复核能力的金融机构",
+      "verdict": "Apache-2.0；日榜约 +509，最近推送为 2026-09-21。README 明确不构成投资、法律、税务或会计建议，输出须由专业人员签署且不得自动交易。"
     },
     {
-      "name": "pbakaus/impeccable",
-      "url": "https://github.com/pbakaus/impeccable",
-      "category": "Agent Skills",
-      "language": "JavaScript",
-      "stars": 70402,
-      "starsToday": 304,
-      "effort": 2,
-      "badge": "新上榜",
-      "description": "为 AI 编码工具提供设计语言、24 个命令、浏览器迭代和 61 条确定性前端检测规则。",
-      "tags": ["frontend-design", "skill", "audit"],
-      "fit": "希望提高生成式前端设计一致性、可访问性和验收质量的产品团队",
-      "verdict": "Apache-2.0；日榜约 +304，2026-09-24 UTC 有推送，仓库含测试、锁文件和多客户端构建。安装器会写入多种 Agent 目录、配置 Hooks，并可能下载本地二进制；需固定版本、核验来源并按工具批准 Hook。"
-    },
-    {
-      "name": "DeusData/codebase-memory-mcp",
-      "url": "https://github.com/DeusData/codebase-memory-mcp",
+      "name": "superdesigndev/treg",
+      "url": "https://github.com/superdesigndev/treg",
       "category": "AI 工程",
-      "language": "C",
-      "stars": 44623,
-      "starsToday": 190,
+      "language": "Python",
+      "stars": 3187,
+      "starsToday": 468,
+      "effort": 3,
+      "badge": "连续热门",
+      "description": "为 Agent 提供统一工具注册表、MCP/CLI 代理、服务端凭据注入和外部 API 计费调用。",
+      "tags": ["tool-registry", "mcp", "credentials"],
+      "fit": "需要集中管理 Agent 工具目录、凭据和调用成本的平台团队",
+      "verdict": "日榜约 +468，2026-09-25 UTC 有推送；GitHub API 未识别标准 SPDX，许可证为 Apache-2.0 加禁止向第三方提供托管服务的附加条款。托管模式持有组织凭据，安装脚本、遥测和预付费调用都应先审计。"
+    },
+    {
+      "name": "strands-agents/harness-sdk",
+      "url": "https://github.com/strands-agents/harness-sdk",
+      "category": "AI Agent",
+      "language": "Python",
+      "stars": 8279,
+      "starsToday": 455,
       "effort": 3,
       "badge": "新上榜",
-      "description": "本地代码智能 MCP，以 tree-sitter 与持久知识图索引函数、调用链、路由和跨服务关系。",
-      "tags": ["mcp", "code-intelligence", "knowledge-graph"],
-      "fit": "需要本地代码库结构检索、影响分析和跨 Agent 共享索引的开发团队",
-      "verdict": "MIT；日榜约 +190，2026-09-24 UTC 有推送，仓库含源码、测试、SECURITY 与第三方声明。README 性能与测试数字为项目方自报；一键安装会修改多个 Agent 配置、启动后台协调进程并索引代码，应先核验发布哈希并使用隔离副本。"
+      "description": "为 Agent 应用提供生命周期、预算、取消、工具、MCP、多 Agent、记忆、护栏、追踪和评测控制。",
+      "tags": ["agent-sdk", "guardrails", "observability"],
+      "fit": "需要把 Agent 运行时控制、评测和可观测性统一到 Python 或 TypeScript 的工程团队",
+      "verdict": "Apache-2.0；日榜约 +455，2026-09-24 UTC 有推送。仓库含 Python/TypeScript 实现、测试、锁文件和 SECURITY；工具包、MCP 与模型提供方会扩大权限面，轮次预算和默认护栏不能替代服务端最小权限与人工批准。"
+    },
+    {
+      "name": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "category": "AI 工程",
+      "language": "Python",
+      "stars": 50363,
+      "starsToday": 413,
+      "effort": 3,
+      "badge": "新上榜",
+      "description": "为桌面软件和专业应用生成 Agent 可调用 CLI，并通过社区注册表复用适配器。",
+      "tags": ["cli", "agent-tools", "desktop-automation"],
+      "fit": "希望把现有 GUI 软件接入 Agent 工作流并能审计命令权限的开发者",
+      "verdict": "Apache-2.0；日榜约 +413，最近推送为 2026-09-22。仓库有测试、安全文档和大量软件适配目录，但 README 的测试数量为项目方自报；社区生成的 CLI 可能控制高权限应用，必须逐个核查适配器、目标软件条款和命令允许列表。"
+    },
+    {
+      "name": "rohitg00/ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "category": "AI 工程",
+      "language": "Python",
+      "stars": 56666,
+      "starsToday": 347,
+      "effort": 2,
+      "badge": "新上榜",
+      "description": "覆盖 LLM、RAG、Agent、MCP、评测与多语言实现的分阶段 AI 工程课程和代码练习。",
+      "tags": ["learning", "rag", "agent-engineering"],
+      "fit": "希望系统补齐 AI 工程基础并通过小型代码练习建立知识地图的学习者",
+      "verdict": "MIT；日榜约 +347，2026-09-24 UTC 有推送。课程范围很大，README 的课时与规模数字为项目方自报，示例不能直接当生产模板；Skill 安装器会写入宿主 Agent 配置，运行前应先读脚本并使用隔离环境。"
+    },
+    {
+      "name": "NVIDIA/Model-Optimizer",
+      "url": "https://github.com/NVIDIA/Model-Optimizer",
+      "category": "AI 工程",
+      "language": "Python",
+      "stars": 4119,
+      "starsToday": 44,
+      "effort": 5,
+      "badge": "新上榜",
+      "description": "面向 PyTorch、Hugging Face、ONNX 与 NVIDIA 推理栈的量化、剪枝、蒸馏、NAS 和推测解码工具。",
+      "tags": ["quantization", "inference", "model-optimization"],
+      "fit": "需要在 NVIDIA GPU 上评估大模型压缩与推理性能的模型和平台工程师",
+      "verdict": "Apache-2.0；日榜约 +44，2026-09-25 UTC 有推送，仓库含测试、示例、SECURITY、锁文件和文档。上手需要较重的 GPU 与依赖栈；第三方包或镜像可能使用其他许可证，任何量化或剪枝都必须用任务级基准检查质量回归。"
     }
   ],
   "learningPath": [
     {
-      "title": "10 分钟：列安装面",
-      "description": "对 Superpowers、Impeccable 和 claude-code-templates 分别列出会写入的目录、Hook、脚本、MCP、二进制和外部服务，不执行安装。"
+      "title": "10 分钟：画出记忆数据流",
+      "description": "标出 retain、recall、reflect、memory bank、数据库、模型提供方和日志之间的数据路径，明确哪些边界可能离开本机。"
     },
     {
-      "title": "15 分钟：固定来源并做静态检查",
-      "description": "记录仓库提交 SHA、许可证与第三方组件来源，检查安装脚本、Hook 清单、网络下载、遥测和卸载路径。"
+      "title": "15 分钟：固定版本并准备隔离环境",
+      "description": "记录 Hindsight 提交或镜像版本，仅绑定回环地址，在一次性容器或目录中启动；只使用虚构数据，不放入真实账号、客户信息或生产密钥。"
     },
     {
-      "title": "15 分钟：最小权限沙箱测试",
-      "description": "在一次性仓库中只启用一个技能，禁用真实凭据和生产网络，观察其文件修改、子进程、端口、环境变量与 Agent 配置变化。"
+      "title": "15 分钟：做隔离与投毒测试",
+      "description": "建立两个独立 memory bank，验证跨 bank 查询不能取回内容；把不可信指令作为记忆写入，确认应用不会把它当作高优先级系统指令执行。"
     },
     {
-      "title": "10 分钟：形成准入卡",
-      "description": "写明允许版本、文件写入、网络目的地、回滚步骤、审查责任人和拒绝条件，再决定是否进入团队模板。"
+      "title": "10 分钟：验证清理与审计",
+      "description": "按文档执行 bank 清理或删除并核查存储、日志和备份，记录模型路由、保留策略、失败处理和责任人。"
     }
   ],
   "practice": {
-    "title": "制作一张 Agent 技能供应链审计卡",
-    "description": "任选 Superpowers、Impeccable 或 claude-code-templates，在一次性仓库中固定提交，只做静态检查和无凭据沙箱安装；记录 Hook、脚本、下载、遥测、配置修改、第三方许可证及完整卸载结果，产出允许清单和拒绝条件。"
+    "title": "完成一次 Agent 记忆隔离与清理演练",
+    "description": "在隔离环境中固定 Hindsight 版本，只写入虚构资料；创建两个 memory bank，测试跨 bank 泄漏、恶意记忆注入、模型提供方与日志暴露，随后按文档清理数据并核查容器、卷、日志和备份，形成允许数据类型、保留期、删除证据和拒绝条件。"
   }
 }
