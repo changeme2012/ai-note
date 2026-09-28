@@ -1,173 +1,173 @@
 {
-  "snapshotDate": "2026-09-26",
+  "snapshotDate": "2026-09-27",
   "source": {
     "name": "GitHub Trending + GitHub Repository API",
     "url": "https://github.com/trending",
-    "capturedAt": "2026-09-27T03:53:23Z",
-    "note": "本期 8 个项目的 starsToday 来自采集时 GitHub Trending 日榜，2 个延续观察项目明确记为 0。总 Star、许可证、README、安全文档与最近推送来自 GitHub 仓库/API；连续性参考上一期日报。周榜和月榜仍无法可靠读取，因此不引用、不换算也不编造 7/30 日增长。"
+    "capturedAt": "2026-09-28T04:04:31Z",
+    "note": "本期 6 个项目的 starsToday 来自采集时 GitHub Trending 日榜，4 个延续观察项目明确记为 0。总 Star、许可证、README、安全文档与最近推送来自 GitHub 仓库/API；连续性参考上一期日报。周榜和月榜页面无法可靠读取，因此不引用、不换算也不编造 7/30 日增长。"
   },
   "projects": [
-    {
-      "name": "paperclipai/paperclip",
-      "url": "https://github.com/paperclipai/paperclip",
-      "category": "AI Agent",
-      "language": "TypeScript",
-      "stars": 87624,
-      "starsToday": 2608,
-      "effort": 4,
-      "badge": "今日领跑",
-      "description": "以组织架构、任务、预算、审批、工作区和审计日志统一管理多种 AI Agent。",
-      "tags": ["multi-agent", "governance", "cost-control"],
-      "fit": "需要集中管理多 Agent 工作、预算、权限与人工审批的平台和应用团队",
-      "verdict": "MIT；日榜约 +2,608，2026-09-27 UTC 有推送，仓库含测试、评测、SECURITY、锁文件与安装/回滚文档。安装器可写入 ~/.paperclip、启动后台服务并接触 Agent API Key；严肃环境应固定 release 或提交，并先验证预算硬停、审批、密钥作用域、插件权限和卸载。"
-    },
     {
       "name": "vectorize-io/hindsight",
       "url": "https://github.com/vectorize-io/hindsight",
       "category": "AI 工程",
       "language": "Python",
-      "stars": 32535,
-      "starsToday": 2147,
+      "stars": 37826,
+      "starsToday": 4520,
       "effort": 4,
-      "badge": "连续热门",
+      "badge": "今日领跑",
       "description": "面向 Agent 的长期记忆系统，以 retain、recall、reflect 和独立 memory bank 管理结构化记忆。",
       "tags": ["agent-memory", "rag", "self-hosted"],
       "fit": "需要跨会话记忆、可控知识沉淀和多 Agent 记忆隔离的平台团队",
-      "verdict": "MIT；日榜约 +2,147，2026-09-26 UTC 有推送。仓库含测试、评测、SECURITY、Docker、Helm 与嵌入式路径；README 的基准和生产效果为项目方自报。真实部署前必须验证 bank/租户隔离、保留与删除、记忆投毒、日志脱敏及外部模型提供方的数据边界。"
+      "verdict": "MIT；日榜约 +4,520，最近推送为 2026-09-26。仓库含测试、评测、SECURITY、Docker、Helm 与嵌入式路径；README 的基准和生产效果为项目方自报。真实部署前必须验证 bank/租户隔离、保留与删除、记忆投毒、日志脱敏及外部模型提供方的数据边界。"
+    },
+    {
+      "name": "debpalash/VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "category": "AI 多媒体",
+      "language": "Python",
+      "stars": 40539,
+      "starsToday": 3086,
+      "effort": 3,
+      "badge": "重返榜单",
+      "description": "本地语音克隆、声音设计、视频配音、听写、转录与有声书制作平台，并提供 API 和 MCP。",
+      "tags": ["voice-cloning", "local-ai", "dubbing"],
+      "fit": "需要本地语音工作流、视频配音或语音 Agent 接口的创作与产品团队",
+      "verdict": "AGPL-3.0；日榜约 +3,086，2026-09-27 UTC 有推送。README 提供发行版、平台安装、Docker、模型目录、性能和基准文档，CI 与版本化安装路径完整；一键脚本会安装应用与模型，模型各有独立许可。商业使用前需逐模型核查，声音克隆必须取得授权并评估生物特征与版权风险。"
+    },
+    {
+      "name": "paperclipai/paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "category": "AI Agent",
+      "language": "TypeScript",
+      "stars": 90372,
+      "starsToday": 2401,
+      "effort": 4,
+      "badge": "连续热门",
+      "description": "以组织架构、任务、预算、审批、工作区和审计日志统一管理多种 AI Agent。",
+      "tags": ["multi-agent", "governance", "cost-control"],
+      "fit": "需要集中管理多 Agent 工作、预算、权限与人工审批的平台和应用团队",
+      "verdict": "MIT；日榜约 +2,401，2026-09-28 UTC 有推送，仓库含测试、评测、SECURITY、锁文件与安装/回滚文档。安装器可写入 ~/.paperclip、启动后台服务并接触 Agent API Key；严肃环境应固定 release 或提交，并先验证预算硬停、审批、密钥作用域、插件权限和卸载。"
     },
     {
       "name": "dream-num/univer",
       "url": "https://github.com/dream-num/univer",
       "category": "AI 工程",
       "language": "TypeScript",
-      "stars": 19490,
-      "starsToday": 849,
+      "stars": 20702,
+      "starsToday": 895,
       "effort": 3,
       "badge": "连续热门",
       "description": "可扩展的表格、文档、幻灯片和 PDF Office 运行时，让人员与 Agent 在同一业务对象中协作。",
       "tags": ["office-sdk", "spreadsheet", "agent-ui"],
       "fit": "希望把 AI 助手嵌入表格、文档或协作应用的前端与产品团队",
-      "verdict": "Apache-2.0；日榜约 +849，最近推送为 2026-09-24，仓库含测试、示例、SECURITY 和锁文件。部分协作、修订与服务能力属于 Web SDK 或 Pro 包，部署前需逐包核查功能、数据边界与许可。"
+      "verdict": "Apache-2.0；日榜约 +895，2026-09-28 UTC 有推送，仓库含测试、示例、SECURITY 和锁文件。部分协作、修订与服务能力属于 Web SDK 或 Pro 包，部署前需逐包核查功能、数据边界与许可。"
     },
     {
       "name": "rohitg00/ai-engineering-from-scratch",
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "category": "AI 工程",
       "language": "Python",
-      "stars": 58454,
-      "starsToday": 827,
+      "stars": 59523,
+      "starsToday": 790,
       "effort": 2,
       "badge": "连续热门",
       "description": "覆盖 LLM、RAG、Agent、MCP、评测与多语言实现的分阶段 AI 工程课程和代码练习。",
       "tags": ["learning", "rag", "agent-engineering"],
       "fit": "希望系统补齐 AI 工程基础并通过小型代码练习建立知识地图的学习者",
-      "verdict": "MIT；日榜约 +827，2026-09-26 UTC 有推送。课程范围很大，README 的课时与规模数字为项目方自报，示例不能直接当生产模板；Skill 安装器会写入宿主 Agent 配置，运行前应先读脚本并使用隔离环境。"
+      "verdict": "MIT；日榜约 +790，2026-09-27 UTC 有推送。课程范围很大，README 的课时与规模数字为项目方自报，示例不能直接当生产模板；Skill 安装器会写入宿主 Agent 配置，运行前应先读脚本并使用隔离环境。"
+    },
+    {
+      "name": "mvschwarz/openrig",
+      "url": "https://github.com/mvschwarz/openrig",
+      "category": "AI Agent",
+      "language": "TypeScript",
+      "stars": 1092,
+      "starsToday": 114,
+      "effort": 4,
+      "badge": "新上榜",
+      "description": "用 YAML、tmux、守护进程和 TUI 把 Claude Code、Codex 等编码 Agent 组织为可恢复的多 Agent 团队。",
+      "tags": ["multi-agent", "codex", "claude-code"],
+      "fit": "需要编排多个编码 Agent、保留会话拓扑并建立独立复核角色的工程团队",
+      "verdict": "Apache-2.0；日榜约 +114，2026-09-28 UTC 有推送。README、入门、升级、安全与机器写入说明很完整，但 setup/daemon 会修改 tmux、Claude/Codex 配置、Hooks、信任记录和工作区文件；dry-run 不覆盖后续全部自动写入，改变 OPENRIG_HOME 也不能完全隔离 provider 配置。应先在一次性用户或 VM、虚构仓库、非 YOLO 和最小权限下验证差异与回滚。"
     },
     {
       "name": "NVIDIA/Model-Optimizer",
       "url": "https://github.com/NVIDIA/Model-Optimizer",
       "category": "AI 工程",
       "language": "Python",
-      "stars": 4790,
-      "starsToday": 357,
+      "stars": 4952,
+      "starsToday": 0,
       "effort": 5,
-      "badge": "连续热门",
+      "badge": "延续观察",
       "description": "面向 PyTorch、Hugging Face、ONNX 与 NVIDIA 推理栈的量化、剪枝、蒸馏、NAS 和推测解码工具。",
       "tags": ["quantization", "inference", "model-optimization"],
       "fit": "需要在 NVIDIA GPU 上评估大模型压缩与推理性能的模型和平台工程师",
-      "verdict": "Apache-2.0；日榜约 +357，2026-09-27 UTC 有推送，仓库含测试、示例、SECURITY、锁文件和文档。项目仍为 0.x，弃用策略允许小版本出现破坏性变化；第三方依赖/镜像许可及量化后的任务级质量回归都要单独验证。"
+      "verdict": "Apache-2.0；本期未在采集到的日榜条目中看到可核实日增，故 starsToday 记为 0；2026-09-28 UTC 有推送。项目仍为 0.x，第三方依赖/镜像许可及量化后的任务级质量回归都要单独验证。"
     },
     {
       "name": "mobile-next/mobile-mcp",
       "url": "https://github.com/mobile-next/mobile-mcp",
       "category": "AI Agent",
       "language": "TypeScript",
-      "stars": 7424,
-      "starsToday": 168,
+      "stars": 7965,
+      "starsToday": 0,
       "effort": 3,
-      "badge": "新上榜",
+      "badge": "延续观察",
       "description": "通过 MCP 让 Agent 使用可访问性树和坐标操作 iOS、Android 模拟器、仿真器与真实设备。",
       "tags": ["mcp", "mobile-automation", "testing"],
       "fit": "希望用 Agent 做移动端 QA、数据录入和跨平台用户旅程测试的开发与测试团队",
-      "verdict": "Apache-2.0；日榜约 +168，最近推送为 2026-09-23，README 提供平台矩阵、工具清单和安装路径，SECURITY 建议使用专用设备。它可读剪贴板、改定位、安装/卸载应用、访问日志和操作真实设备；示例使用 @latest，试验时应固定版本、使用无个人账号的模拟器并逐工具授权。"
-    },
-    {
-      "name": "tensorflow/tensorflow",
-      "url": "https://github.com/tensorflow/tensorflow",
-      "category": "AI 工程",
-      "language": "C++",
-      "stars": 200476,
-      "starsToday": 46,
-      "effort": 3,
-      "badge": "新上榜",
-      "description": "成熟的端到端机器学习平台，覆盖训练、部署、设备加速和多语言 API。",
-      "tags": ["machine-learning", "training", "deployment"],
-      "fit": "需要成熟训练与部署生态、稳定 Python/C++ API 或端侧插件的机器学习团队",
-      "verdict": "Apache-2.0；日榜约 +46，2026-09-27 UTC 有推送。README、安装指南、教程、构建状态和安全更新入口完整，但仓库与依赖庞大；GPU/CUDA、操作系统和 Python 版本必须严格匹配，从源码构建成本高，其他语言 API 不保证向后兼容。"
+      "verdict": "Apache-2.0；本期未核实到日榜增量，starsToday 记为 0；最近推送为 2026-09-23。它可读剪贴板、改定位、安装/卸载应用、访问日志和操作真实设备；试验时应固定版本、使用无个人账号的模拟器并逐工具授权。"
     },
     {
       "name": "anthropics/claude-code-action",
       "url": "https://github.com/anthropics/claude-code-action",
       "category": "AI Agent",
       "language": "TypeScript",
-      "stars": 9118,
-      "starsToday": 31,
+      "stars": 9209,
+      "starsToday": 0,
       "effort": 3,
-      "badge": "新上榜",
+      "badge": "延续观察",
       "description": "在 GitHub Issue 与 PR 中触发 Claude Code，完成问答、代码审查、实现和结构化自动化。",
       "tags": ["coding-agent", "github-actions", "code-review"],
       "fit": "希望把编码 Agent 引入 Issue、PR 审查和仓库维护流程的工程团队",
-      "verdict": "MIT；日榜约 +31，最近推送为 2026-09-25，README、迁移、云提供方和安全文档完整。安全文档明确警告 allowed_non_write_users、allowed_bots='*'、pull_request_target/workflow_run 与提示注入风险；必须最小化 workflow permissions，不能把不受信任分支检出到工作区根目录，也不要用长期 PAT。"
-    },
-    {
-      "name": "google/ax",
-      "url": "https://github.com/google/ax",
-      "category": "AI 工程",
-      "language": "Go",
-      "stars": 11949,
-      "starsToday": 0,
-      "effort": 5,
-      "badge": "延续观察",
-      "description": "以类似 Kubernetes 的声明式资源编排 Agent 工作区、任务、网关、模型配置和暂停恢复。",
-      "tags": ["agent-orchestration", "kubernetes", "sandbox"],
-      "fit": "需要统一调度 Agent 工作区、网络出口和模型凭据的平台团队",
-      "verdict": "Apache-2.0；本期未在采集到的日榜条目中看到可核实日增，故 starsToday 记为 0；2026-09-26 UTC 仍有推送。概念和协议仍在演进，稳定版前可能有破坏性变更；生产采用需审查网关白名单、Secret 注入和调试入口。"
+      "verdict": "MIT；本期未核实到日榜增量，starsToday 记为 0；最近推送为 2026-09-25。安全文档明确警告 allowed_non_write_users、allowed_bots='*'、pull_request_target/workflow_run 与提示注入风险；必须最小化 workflow permissions，不能把不受信任分支检出到工作区根目录，也不要使用长期 PAT。"
     },
     {
       "name": "obra/superpowers",
       "url": "https://github.com/obra/superpowers",
       "category": "Agent Skills",
       "language": "Shell",
-      "stars": 291977,
+      "stars": 292224,
       "starsToday": 0,
       "effort": 2,
       "badge": "延续观察",
       "description": "为多种编码 Agent 提供规格澄清、计划、TDD、子 Agent 执行与评审的方法论和可组合技能。",
       "tags": ["coding-agent", "tdd", "workflow"],
       "fit": "希望把编码 Agent 工作流标准化并愿意审计自动触发技能的团队",
-      "verdict": "MIT；本期未在采集到的日榜条目中看到可核实日增，故 starsToday 记为 0；2026-09-27 UTC 有推送。仓库有测试和多客户端插件，但技能会自动触发并包含 Hooks、脚本与安装路径；应固定提交、逐项审查并避免重复插件互相覆盖。"
+      "verdict": "MIT；本期未核实到日榜增量，starsToday 记为 0；最近推送为 2026-09-27。仓库有测试和多客户端插件，但技能会自动触发并包含 Hooks、脚本与安装路径；应固定提交、逐项审查并避免重复插件互相覆盖。"
     }
   ],
   "learningPath": [
     {
-      "title": "10 分钟：列出 Mobile MCP 的能力与资产",
-      "description": "把设备、应用、账号、剪贴板、定位、截图、日志和云端设备列成资产表，并标出读取、修改和删除类工具。"
+      "title": "10 分钟：画出 OpenRig 的写入与信任边界",
+      "description": "列出守护进程、tmux、Claude/Codex 配置、Hooks、信任记录、工作区和外部 MCP，并区分 dry-run 可见与启动后自动写入。"
     },
     {
-      "title": "10 分钟：固定版本并准备空白模拟器",
-      "description": "不使用 @latest；固定 npm 版本或提交，只启动一个无个人账号、无真实通知和无生产应用的模拟器。"
+      "title": "10 分钟：准备一次性环境与虚构仓库",
+      "description": "使用临时 OS 用户或 VM、无真实凭据的玩具仓库，固定 npm 版本；备份用户级配置并记录安装前文件哈希。"
     },
     {
-      "title": "20 分钟：运行受限测试旅程",
-      "description": "只开放列设备、启动测试应用、列元素、点击和截图；完成一个虚构登录表单，记录每个工具调用、屏幕状态和意外权限请求。"
+      "title": "20 分钟：最小双座席验证",
+      "description": "先运行 rig setup --dry-run，再以非 YOLO、workspace-write 和窄命令权限启动 owner/checker；只完成一个可回滚文本改动并独立复核。"
     },
     {
-      "title": "10 分钟：验证清理与拒绝条件",
-      "description": "卸载测试应用、清除剪贴板和定位覆盖，关闭模拟器；确认没有云设备占用、日志残留或宿主配置漂移。"
+      "title": "10 分钟：停止、差异和清理",
+      "description": "停止 rig，比较 tmux、Claude/Codex 配置、Hooks、信任记录与工作区差异，确认没有后台进程、额外 MCP、残留令牌或未解释写入。"
     }
   ],
   "practice": {
-    "title": "完成一次移动 Agent 最小权限与清理演练",
-    "description": "固定 mobile-mcp 版本，在无个人账号的临时模拟器中只授权列设备、启动测试应用、列元素、点击和截图；用虚构数据完成一次表单流程，拒绝剪贴板、定位、安装和日志工具，随后卸载测试应用、清除状态并验证无云设备、日志和宿主配置残留。"
+    "title": "完成一次多 Agent 编排最小权限与回滚演练",
+    "description": "在一次性用户或 VM 和虚构仓库中固定 OpenRig 版本，先审查 dry-run，再用 owner/checker 两个座席完成一个本地 README 文本改动；保持 YOLO 关闭、限制写入与网络，核对复核对象一致，最后停止服务并比较、恢复 Claude/Codex 配置、Hooks、信任记录和工作区状态。"
   }
 }
