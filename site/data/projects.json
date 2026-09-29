@@ -1,10 +1,10 @@
 {
-  "snapshotDate": "2026-09-27",
+  "snapshotDate": "2026-09-28",
   "source": {
     "name": "GitHub Trending + GitHub Repository API",
     "url": "https://github.com/trending",
-    "capturedAt": "2026-09-28T04:04:31Z",
-    "note": "本期 6 个项目的 starsToday 来自采集时 GitHub Trending 日榜，4 个延续观察项目明确记为 0。总 Star、许可证、README、安全文档与最近推送来自 GitHub 仓库/API；连续性参考上一期日报。周榜和月榜页面无法可靠读取，因此不引用、不换算也不编造 7/30 日增长。"
+    "capturedAt": "2026-09-29T03:18:19Z",
+    "note": "本期 5 个项目的 starsToday 来自采集时 GitHub Trending 日榜，5 个延续观察项目明确记为 0。总 Star、许可证、README、安全文档与最近推送来自 GitHub 仓库/API；连续性参考上一期日报。日榜仅返回 8 个条目，周榜和月榜页面仍无法可靠读取，因此不引用、不换算也不编造 7/30 日增长。"
   },
   "projects": [
     {
@@ -12,105 +12,105 @@
       "url": "https://github.com/vectorize-io/hindsight",
       "category": "AI 工程",
       "language": "Python",
-      "stars": 37826,
-      "starsToday": 4520,
+      "stars": 41210,
+      "starsToday": 4561,
       "effort": 4,
       "badge": "今日领跑",
       "description": "面向 Agent 的长期记忆系统，以 retain、recall、reflect 和独立 memory bank 管理结构化记忆。",
       "tags": ["agent-memory", "rag", "self-hosted"],
       "fit": "需要跨会话记忆、可控知识沉淀和多 Agent 记忆隔离的平台团队",
-      "verdict": "MIT；日榜约 +4,520，最近推送为 2026-09-26。仓库含测试、评测、SECURITY、Docker、Helm 与嵌入式路径；README 的基准和生产效果为项目方自报。真实部署前必须验证 bank/租户隔离、保留与删除、记忆投毒、日志脱敏及外部模型提供方的数据边界。"
+      "verdict": "MIT；日榜约 +4,561，2026-09-29 UTC 有推送。仓库含测试、评测、SECURITY、Docker、Helm 与嵌入式路径；README 的基准和生产效果为项目方自报。真实部署前必须验证 bank/租户隔离、保留与删除、记忆投毒、日志脱敏及外部模型提供方的数据边界。"
     },
     {
       "name": "debpalash/VoiceStudio",
       "url": "https://github.com/debpalash/VoiceStudio",
       "category": "AI 多媒体",
       "language": "Python",
-      "stars": 40539,
-      "starsToday": 3086,
+      "stars": 44546,
+      "starsToday": 3221,
       "effort": 3,
-      "badge": "重返榜单",
+      "badge": "连续热门",
       "description": "本地语音克隆、声音设计、视频配音、听写、转录与有声书制作平台，并提供 API 和 MCP。",
       "tags": ["voice-cloning", "local-ai", "dubbing"],
       "fit": "需要本地语音工作流、视频配音或语音 Agent 接口的创作与产品团队",
-      "verdict": "AGPL-3.0；日榜约 +3,086，2026-09-27 UTC 有推送。README 提供发行版、平台安装、Docker、模型目录、性能和基准文档，CI 与版本化安装路径完整；一键脚本会安装应用与模型，模型各有独立许可。商业使用前需逐模型核查，声音克隆必须取得授权并评估生物特征与版权风险。"
+      "verdict": "AGPL-3.0；日榜约 +3,221，2026-09-29 UTC 有推送。README 提供发行版、平台安装、Docker、模型目录、性能和基准文档；一键脚本会安装应用与模型，模型各有独立许可。商业使用前需逐模型核查，声音克隆必须取得授权并评估生物特征与版权风险。"
     },
     {
       "name": "paperclipai/paperclip",
       "url": "https://github.com/paperclipai/paperclip",
       "category": "AI Agent",
       "language": "TypeScript",
-      "stars": 90372,
-      "starsToday": 2401,
+      "stars": 93078,
+      "starsToday": 3197,
       "effort": 4,
       "badge": "连续热门",
       "description": "以组织架构、任务、预算、审批、工作区和审计日志统一管理多种 AI Agent。",
       "tags": ["multi-agent", "governance", "cost-control"],
       "fit": "需要集中管理多 Agent 工作、预算、权限与人工审批的平台和应用团队",
-      "verdict": "MIT；日榜约 +2,401，2026-09-28 UTC 有推送，仓库含测试、评测、SECURITY、锁文件与安装/回滚文档。安装器可写入 ~/.paperclip、启动后台服务并接触 Agent API Key；严肃环境应固定 release 或提交，并先验证预算硬停、审批、密钥作用域、插件权限和卸载。"
+      "verdict": "MIT；日榜约 +3,197，2026-09-29 UTC 有推送，仓库含测试、评测、SECURITY、锁文件与安装/回滚文档。安装器可写入 ~/.paperclip、启动后台服务并接触 Agent API Key；严肃环境应固定 release 或提交，并先验证预算硬停、审批、密钥作用域、插件权限和卸载。"
     },
     {
       "name": "dream-num/univer",
       "url": "https://github.com/dream-num/univer",
       "category": "AI 工程",
       "language": "TypeScript",
-      "stars": 20702,
-      "starsToday": 895,
+      "stars": 21348,
+      "starsToday": 1099,
       "effort": 3,
       "badge": "连续热门",
       "description": "可扩展的表格、文档、幻灯片和 PDF Office 运行时，让人员与 Agent 在同一业务对象中协作。",
       "tags": ["office-sdk", "spreadsheet", "agent-ui"],
       "fit": "希望把 AI 助手嵌入表格、文档或协作应用的前端与产品团队",
-      "verdict": "Apache-2.0；日榜约 +895，2026-09-28 UTC 有推送，仓库含测试、示例、SECURITY 和锁文件。部分协作、修订与服务能力属于 Web SDK 或 Pro 包，部署前需逐包核查功能、数据边界与许可。"
-    },
-    {
-      "name": "rohitg00/ai-engineering-from-scratch",
-      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
-      "category": "AI 工程",
-      "language": "Python",
-      "stars": 59523,
-      "starsToday": 790,
-      "effort": 2,
-      "badge": "连续热门",
-      "description": "覆盖 LLM、RAG、Agent、MCP、评测与多语言实现的分阶段 AI 工程课程和代码练习。",
-      "tags": ["learning", "rag", "agent-engineering"],
-      "fit": "希望系统补齐 AI 工程基础并通过小型代码练习建立知识地图的学习者",
-      "verdict": "MIT；日榜约 +790，2026-09-27 UTC 有推送。课程范围很大，README 的课时与规模数字为项目方自报，示例不能直接当生产模板；Skill 安装器会写入宿主 Agent 配置，运行前应先读脚本并使用隔离环境。"
+      "verdict": "Apache-2.0；日榜约 +1,099，2026-09-29 UTC 有推送，仓库含测试、示例、SECURITY 和锁文件。部分协作、修订与服务能力属于 Web SDK 或 Pro 包，部署前需逐包核查功能、数据边界与许可。"
     },
     {
       "name": "mvschwarz/openrig",
       "url": "https://github.com/mvschwarz/openrig",
       "category": "AI Agent",
       "language": "TypeScript",
-      "stars": 1092,
-      "starsToday": 114,
+      "stars": 1807,
+      "starsToday": 734,
       "effort": 4,
-      "badge": "新上榜",
+      "badge": "连续热门",
       "description": "用 YAML、tmux、守护进程和 TUI 把 Claude Code、Codex 等编码 Agent 组织为可恢复的多 Agent 团队。",
       "tags": ["multi-agent", "codex", "claude-code"],
       "fit": "需要编排多个编码 Agent、保留会话拓扑并建立独立复核角色的工程团队",
-      "verdict": "Apache-2.0；日榜约 +114，2026-09-28 UTC 有推送。README、入门、升级、安全与机器写入说明很完整，但 setup/daemon 会修改 tmux、Claude/Codex 配置、Hooks、信任记录和工作区文件；dry-run 不覆盖后续全部自动写入，改变 OPENRIG_HOME 也不能完全隔离 provider 配置。应先在一次性用户或 VM、虚构仓库、非 YOLO 和最小权限下验证差异与回滚。"
+      "verdict": "Apache-2.0；日榜约 +734，2026-09-29 UTC 有推送。README、入门、升级、安全与机器写入说明完整，但 setup/daemon 会修改 tmux、Claude/Codex 配置、Hooks、信任记录和工作区文件；dry-run 不覆盖后续全部自动写入，改变 OPENRIG_HOME 也不能完全隔离 provider 配置。应先在一次性用户或 VM、虚构仓库、非 YOLO 和最小权限下验证差异与回滚。"
+    },
+    {
+      "name": "rohitg00/ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "category": "AI 工程",
+      "language": "Python",
+      "stars": 60485,
+      "starsToday": 0,
+      "effort": 2,
+      "badge": "延续观察",
+      "description": "覆盖 LLM、RAG、Agent、MCP、评测与多语言实现的分阶段 AI 工程课程和代码练习。",
+      "tags": ["learning", "rag", "agent-engineering"],
+      "fit": "希望系统补齐 AI 工程基础并通过小型代码练习建立知识地图的学习者",
+      "verdict": "MIT；本期未核实到日榜增量，starsToday 记为 0；2026-09-28 UTC 有推送。课程范围很大，README 的课时与规模数字为项目方自报，示例不能直接当生产模板；Skill 安装器会写入宿主 Agent 配置，运行前应先读脚本并使用隔离环境。"
     },
     {
       "name": "NVIDIA/Model-Optimizer",
       "url": "https://github.com/NVIDIA/Model-Optimizer",
       "category": "AI 工程",
       "language": "Python",
-      "stars": 4952,
+      "stars": 5033,
       "starsToday": 0,
       "effort": 5,
       "badge": "延续观察",
       "description": "面向 PyTorch、Hugging Face、ONNX 与 NVIDIA 推理栈的量化、剪枝、蒸馏、NAS 和推测解码工具。",
       "tags": ["quantization", "inference", "model-optimization"],
       "fit": "需要在 NVIDIA GPU 上评估大模型压缩与推理性能的模型和平台工程师",
-      "verdict": "Apache-2.0；本期未在采集到的日榜条目中看到可核实日增，故 starsToday 记为 0；2026-09-28 UTC 有推送。项目仍为 0.x，第三方依赖/镜像许可及量化后的任务级质量回归都要单独验证。"
+      "verdict": "Apache-2.0；本期未核实到日榜增量，starsToday 记为 0；2026-09-29 UTC 有推送。项目仍为 0.x，第三方依赖/镜像许可及量化后的任务级质量回归都要单独验证。"
     },
     {
       "name": "mobile-next/mobile-mcp",
       "url": "https://github.com/mobile-next/mobile-mcp",
       "category": "AI Agent",
       "language": "TypeScript",
-      "stars": 7965,
+      "stars": 8300,
       "starsToday": 0,
       "effort": 3,
       "badge": "延续观察",
@@ -124,21 +124,21 @@
       "url": "https://github.com/anthropics/claude-code-action",
       "category": "AI Agent",
       "language": "TypeScript",
-      "stars": 9209,
+      "stars": 9222,
       "starsToday": 0,
       "effort": 3,
       "badge": "延续观察",
       "description": "在 GitHub Issue 与 PR 中触发 Claude Code，完成问答、代码审查、实现和结构化自动化。",
       "tags": ["coding-agent", "github-actions", "code-review"],
       "fit": "希望把编码 Agent 引入 Issue、PR 审查和仓库维护流程的工程团队",
-      "verdict": "MIT；本期未核实到日榜增量，starsToday 记为 0；最近推送为 2026-09-25。安全文档明确警告 allowed_non_write_users、allowed_bots='*'、pull_request_target/workflow_run 与提示注入风险；必须最小化 workflow permissions，不能把不受信任分支检出到工作区根目录，也不要使用长期 PAT。"
+      "verdict": "MIT；本期未核实到日榜增量，starsToday 记为 0；2026-09-28 UTC 有推送。安全文档明确警告 allowed_non_write_users、allowed_bots='*'、pull_request_target/workflow_run 与提示注入风险；必须最小化 workflow permissions，不能把不受信任分支检出到工作区根目录，也不要使用长期 PAT。"
     },
     {
       "name": "obra/superpowers",
       "url": "https://github.com/obra/superpowers",
       "category": "Agent Skills",
       "language": "Shell",
-      "stars": 292224,
+      "stars": 292546,
       "starsToday": 0,
       "effort": 2,
       "badge": "延续观察",
@@ -150,24 +150,24 @@
   ],
   "learningPath": [
     {
-      "title": "10 分钟：画出 OpenRig 的写入与信任边界",
-      "description": "列出守护进程、tmux、Claude/Codex 配置、Hooks、信任记录、工作区和外部 MCP，并区分 dry-run 可见与启动后自动写入。"
+      "title": "10 分钟：定义记忆隔离模型",
+      "description": "为两个虚构租户建立独立 memory bank，列出可写入字段、敏感字段、保留期限、删除责任人与禁止跨 bank 查询规则。"
     },
     {
-      "title": "10 分钟：准备一次性环境与虚构仓库",
-      "description": "使用临时 OS 用户或 VM、无真实凭据的玩具仓库，固定 npm 版本；备份用户级配置并记录安装前文件哈希。"
+      "title": "15 分钟：固定版本并准备合成数据",
+      "description": "固定 Hindsight 提交或镜像，在隔离环境只使用虚构用户、订单和偏好；不开真实模型密钥或生产数据库。"
     },
     {
-      "title": "20 分钟：最小双座席验证",
-      "description": "先运行 rig setup --dry-run，再以非 YOLO、workspace-write 和窄命令权限启动 owner/checker；只完成一个可回滚文本改动并独立复核。"
+      "title": "20 分钟：验证隔离与投毒防护",
+      "description": "分别写入两个 bank，测试跨 bank recall 必须为空；注入一条冲突事实，观察检索、置信度、来源和人工纠正路径。"
     },
     {
-      "title": "10 分钟：停止、差异和清理",
-      "description": "停止 rig，比较 tmux、Claude/Codex 配置、Hooks、信任记录与工作区差异，确认没有后台进程、额外 MCP、残留令牌或未解释写入。"
+      "title": "10 分钟：验证删除与证据",
+      "description": "删除指定用户记忆并重新检索，检查数据库、缓存、日志和备份边界；记录可证明删除与仍待确认的部分。"
     }
   ],
   "practice": {
-    "title": "完成一次多 Agent 编排最小权限与回滚演练",
-    "description": "在一次性用户或 VM 和虚构仓库中固定 OpenRig 版本，先审查 dry-run，再用 owner/checker 两个座席完成一个本地 README 文本改动；保持 YOLO 关闭、限制写入与网络，核对复核对象一致，最后停止服务并比较、恢复 Claude/Codex 配置、Hooks、信任记录和工作区状态。"
+    "title": "完成一次 Agent 记忆隔离、投毒与删除验证",
+    "description": "固定 Hindsight 版本，在隔离环境创建两个虚构 memory bank；写入互相冲突的合成事实，验证跨 bank 不可召回、错误记忆可溯源和纠正，随后删除一个虚构用户并检查检索、缓存、日志与数据库残留，形成一页证据表。"
   }
 }
